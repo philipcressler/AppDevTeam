@@ -7,12 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		350308E219F9761100A35D60 /* HealthKitHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350308E119F9761100A35D60 /* HealthKitHandler.swift */; };
+		3565435E19FED9E700243FC6 /* Journey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3565435D19FED9E700243FC6 /* Journey.swift */; };
+		3565436019FEDBE300243FC6 /* JourneyHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3565435F19FEDBE200243FC6 /* JourneyHandler.swift */; };
 		35D0FE5A19F6DD260094AE75 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D0FE5919F6DD260094AE75 /* AppDelegate.swift */; };
 		35D0FE5C19F6DD260094AE75 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D0FE5B19F6DD260094AE75 /* ViewController.swift */; };
 		35D0FE5F19F6DD260094AE75 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35D0FE5D19F6DD260094AE75 /* Main.storyboard */; };
 		35D0FE6119F6DD260094AE75 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35D0FE6019F6DD260094AE75 /* Images.xcassets */; };
 		35D0FE6419F6DD260094AE75 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35D0FE6219F6DD260094AE75 /* LaunchScreen.xib */; };
 		35D0FE7019F6DD260094AE75 /* fs2014Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D0FE6F19F6DD260094AE75 /* fs2014Tests.swift */; };
+		35D0FE7B19F6DD3D0094AE75 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35D0FE7A19F6DD3D0094AE75 /* HealthKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +30,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		350308E119F9761100A35D60 /* HealthKitHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthKitHandler.swift; sourceTree = "<group>"; };
+		3565435D19FED9E700243FC6 /* Journey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Journey.swift; sourceTree = "<group>"; };
+		3565435F19FEDBE200243FC6 /* JourneyHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JourneyHandler.swift; sourceTree = "<group>"; };
 		35D0FE5419F6DD260094AE75 /* fs2014.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fs2014.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35D0FE5819F6DD260094AE75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		35D0FE5919F6DD260094AE75 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +43,8 @@
 		35D0FE6919F6DD260094AE75 /* fs2014Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = fs2014Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		35D0FE6E19F6DD260094AE75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		35D0FE6F19F6DD260094AE75 /* fs2014Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fs2014Tests.swift; sourceTree = "<group>"; };
+		35D0FE7919F6DD3D0094AE75 /* fs2014.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = fs2014.entitlements; sourceTree = "<group>"; };
+		35D0FE7A19F6DD3D0094AE75 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35D0FE7B19F6DD3D0094AE75 /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +69,7 @@
 		35D0FE4B19F6DD250094AE75 = {
 			isa = PBXGroup;
 			children = (
+				35D0FE7A19F6DD3D0094AE75 /* HealthKit.framework */,
 				35D0FE5619F6DD260094AE75 /* fs2014 */,
 				35D0FE6C19F6DD260094AE75 /* fs2014Tests */,
 				35D0FE5519F6DD260094AE75 /* Products */,
@@ -77,8 +88,12 @@
 		35D0FE5619F6DD260094AE75 /* fs2014 */ = {
 			isa = PBXGroup;
 			children = (
+				350308E119F9761100A35D60 /* HealthKitHandler.swift */,
+				35D0FE7919F6DD3D0094AE75 /* fs2014.entitlements */,
 				35D0FE5919F6DD260094AE75 /* AppDelegate.swift */,
 				35D0FE5B19F6DD260094AE75 /* ViewController.swift */,
+				3565435D19FED9E700243FC6 /* Journey.swift */,
+				3565435F19FEDBE200243FC6 /* JourneyHandler.swift */,
 				35D0FE5D19F6DD260094AE75 /* Main.storyboard */,
 				35D0FE6019F6DD260094AE75 /* Images.xcassets */,
 				35D0FE6219F6DD260094AE75 /* LaunchScreen.xib */,
@@ -161,6 +176,12 @@
 				TargetAttributes = {
 					35D0FE5319F6DD260094AE75 = {
 						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = 4FNJNUQ3AD;
+						SystemCapabilities = {
+							com.apple.HealthKit = {
+								enabled = 1;
+							};
+						};
 					};
 					35D0FE6819F6DD260094AE75 = {
 						CreatedOnToolsVersion = 6.0;
@@ -212,8 +233,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3565435E19FED9E700243FC6 /* Journey.swift in Sources */,
+				350308E219F9761100A35D60 /* HealthKitHandler.swift in Sources */,
 				35D0FE5C19F6DD260094AE75 /* ViewController.swift in Sources */,
 				35D0FE5A19F6DD260094AE75 /* AppDelegate.swift in Sources */,
+				3565436019FEDBE300243FC6 /* JourneyHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,6 +360,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = fs2014/fs2014.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = fs2014/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -346,6 +372,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = fs2014/fs2014.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = fs2014/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -405,6 +433,7 @@
 				35D0FE7519F6DD260094AE75 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		35D0FE7619F6DD260094AE75 /* Build configuration list for PBXNativeTarget "fs2014Tests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +442,7 @@
 				35D0FE7819F6DD260094AE75 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
