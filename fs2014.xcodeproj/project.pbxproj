@@ -17,6 +17,10 @@
 		35D0FE6419F6DD260094AE75 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35D0FE6219F6DD260094AE75 /* LaunchScreen.xib */; };
 		35D0FE7019F6DD260094AE75 /* fs2014Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D0FE6F19F6DD260094AE75 /* fs2014Tests.swift */; };
 		35D0FE7B19F6DD3D0094AE75 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35D0FE7A19F6DD3D0094AE75 /* HealthKit.framework */; };
+		388D6A8C1A16D6340017CC59 /* StreetViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388D6A8B1A16D6340017CC59 /* StreetViewViewController.swift */; };
+		388D6A8E1A16D6500017CC59 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388D6A8D1A16D6500017CC59 /* HistoryViewController.swift */; };
+		38F138BE1A156A7A004C128A /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F138BD1A156A7A004C128A /* PickerViewController.swift */; };
+		38F138C01A15A8F5004C128A /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F138BF1A15A8F5004C128A /* DashboardViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +49,10 @@
 		35D0FE6F19F6DD260094AE75 /* fs2014Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fs2014Tests.swift; sourceTree = "<group>"; };
 		35D0FE7919F6DD3D0094AE75 /* fs2014.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = fs2014.entitlements; sourceTree = "<group>"; };
 		35D0FE7A19F6DD3D0094AE75 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		388D6A8B1A16D6340017CC59 /* StreetViewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreetViewViewController.swift; sourceTree = "<group>"; };
+		388D6A8D1A16D6500017CC59 /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		38F138BD1A156A7A004C128A /* PickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
+		38F138BF1A15A8F5004C128A /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,13 +96,17 @@
 		35D0FE5619F6DD260094AE75 /* fs2014 */ = {
 			isa = PBXGroup;
 			children = (
-				350308E119F9761100A35D60 /* HealthKitHandler.swift */,
-				35D0FE7919F6DD3D0094AE75 /* fs2014.entitlements */,
 				35D0FE5919F6DD260094AE75 /* AppDelegate.swift */,
+				38F138BD1A156A7A004C128A /* PickerViewController.swift */,
+				38F138BF1A15A8F5004C128A /* DashboardViewController.swift */,
+				388D6A8B1A16D6340017CC59 /* StreetViewViewController.swift */,
+				388D6A8D1A16D6500017CC59 /* HistoryViewController.swift */,
 				35D0FE5B19F6DD260094AE75 /* ViewController.swift */,
+				350308E119F9761100A35D60 /* HealthKitHandler.swift */,
 				3565435D19FED9E700243FC6 /* Journey.swift */,
 				3565435F19FEDBE200243FC6 /* JourneyHandler.swift */,
 				35D0FE5D19F6DD260094AE75 /* Main.storyboard */,
+				35D0FE7919F6DD3D0094AE75 /* fs2014.entitlements */,
 				35D0FE6019F6DD260094AE75 /* Images.xcassets */,
 				35D0FE6219F6DD260094AE75 /* LaunchScreen.xib */,
 				35D0FE5719F6DD260094AE75 /* Supporting Files */,
@@ -233,9 +245,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38F138BE1A156A7A004C128A /* PickerViewController.swift in Sources */,
+				38F138C01A15A8F5004C128A /* DashboardViewController.swift in Sources */,
+				388D6A8C1A16D6340017CC59 /* StreetViewViewController.swift in Sources */,
 				3565435E19FED9E700243FC6 /* Journey.swift in Sources */,
 				350308E219F9761100A35D60 /* HealthKitHandler.swift in Sources */,
 				35D0FE5C19F6DD260094AE75 /* ViewController.swift in Sources */,
+				388D6A8E1A16D6500017CC59 /* HistoryViewController.swift in Sources */,
 				35D0FE5A19F6DD260094AE75 /* AppDelegate.swift in Sources */,
 				3565436019FEDBE300243FC6 /* JourneyHandler.swift in Sources */,
 			);
@@ -362,9 +378,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = fs2014/fs2014.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = fs2014/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -374,9 +392,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = fs2014/fs2014.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = fs2014/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

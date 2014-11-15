@@ -6,6 +6,8 @@
 //  Copyright (c) 2014 Philip Cressler. All rights reserved.
 //
 
+/*
+
 import UIKit
 import HealthKit
 
@@ -93,3 +95,4 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     }
 }
 
+*/
