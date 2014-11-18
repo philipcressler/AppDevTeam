@@ -61,6 +61,14 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         startButton!.frame = CGRectMake(self.view.center.x - (75/2), 450, 75, 50)
         view.addSubview(startButton!)
         
+        
+        
+        var localNotification:UILocalNotification = UILocalNotification()
+        localNotification.alertAction = "Testing notifications on iOS8"
+        localNotification.alertBody = "Testing test shit test"
+        //test test test 30 secs
+        localNotification.fireDate = NSDate(timeIntervalSinceNow: 30)
+        UIApplication.sharedApplication().scheduleLocalNotification(localNotification)
     }
 
     override func didReceiveMemoryWarning() {
