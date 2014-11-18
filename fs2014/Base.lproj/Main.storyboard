@@ -17,20 +17,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SpH-4F-vna">
-                                <rect key="frame" x="0.0" y="20" width="600" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="vRr-RW-zcE"/>
-                                </constraints>
-                                <color key="barTintColor" red="0.55294117647058827" green="0.77647058823529413" blue="0.24705882352941178" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <textAttributes key="titleTextAttributes">
-                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
-                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </textAttributes>
-                                <items>
-                                    <navigationItem title="Journey+" id="X4M-Eh-pOr"/>
-                                </items>
-                            </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tHL-aZ-Kx6">
                                 <rect key="frame" x="10" y="506" width="580" height="35"/>
                                 <color key="backgroundColor" red="0.81960784313725488" green="0.82745098039215681" blue="0.83137254901960789" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -53,6 +39,20 @@
                                     <constraint firstAttribute="height" constant="162" id="7SP-eU-2j8"/>
                                 </constraints>
                             </pickerView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SpH-4F-vna">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="vRr-RW-zcE"/>
+                                </constraints>
+                                <color key="barTintColor" red="0.55294117647058827" green="0.77647058823529413" blue="0.24705882352941178" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Journey+" id="X4M-Eh-pOr"/>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" red="0.90196078431372551" green="0.90588235294117647" blue="0.90980392156862744" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -72,7 +72,7 @@
                             <constraint firstItem="tHL-aZ-Kx6" firstAttribute="trailing" secondItem="c3r-nB-zsQ" secondAttribute="trailingMargin" constant="10" id="nar-xH-jO5"/>
                             <constraint firstItem="tHL-aZ-Kx6" firstAttribute="top" secondItem="qef-fl-hW5" secondAttribute="bottom" constant="10" id="r2d-eb-tKa"/>
                             <constraint firstItem="SpH-4F-vna" firstAttribute="leading" secondItem="c3r-nB-zsQ" secondAttribute="leadingMargin" constant="-16" id="sul-t9-7ga"/>
-                            <constraint firstItem="SpH-4F-vna" firstAttribute="top" secondItem="Yf7-Zs-Eoa" secondAttribute="bottom" id="wzh-MR-e4Y"/>
+                            <constraint firstItem="SpH-4F-vna" firstAttribute="top" secondItem="Yf7-Zs-Eoa" secondAttribute="bottom" constant="-20" id="wzh-MR-e4Y"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -105,8 +105,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gwY-uB-vTN">
-                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gwY-uB-vTN">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="y0N-g7-Q2g"/>
                                 </constraints>
@@ -125,6 +125,9 @@
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="Settings" id="peb-Vn-H2S">
                                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <segue destination="AeU-nd-kS4" kind="show" id="fLi-5S-82o"/>
+                                            </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
@@ -133,7 +136,8 @@
                         <color key="backgroundColor" red="0.90196078431372551" green="0.90588235294117647" blue="0.90980392156862744" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="gwY-uB-vTN" secondAttribute="centerX" id="37x-w2-YtO"/>
-                            <constraint firstItem="gwY-uB-vTN" firstAttribute="top" secondItem="TRL-Wj-bKI" secondAttribute="bottom" id="yfs-3M-j7U"/>
+                            <constraint firstItem="gwY-uB-vTN" firstAttribute="leading" secondItem="exX-qu-mQi" secondAttribute="leading" id="XqC-UO-MGl"/>
+                            <constraint firstItem="gwY-uB-vTN" firstAttribute="top" secondItem="TRL-Wj-bKI" secondAttribute="bottom" constant="-20" id="yfs-3M-j7U"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Dashboard" id="qbP-E8-pVf"/>
@@ -142,7 +146,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yd8-Iu-RdL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1490" y="-1204"/>
+            <point key="canvasLocation" x="1483" y="-1204"/>
         </scene>
         <!--Title-->
         <scene sceneID="Wtc-eX-QCL">
@@ -155,14 +159,48 @@
                     <view key="view" contentMode="scaleToFill" id="OBf-0d-heD">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CY1-bJ-N86">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="uQ8-tz-Aqz"/>
+                                </constraints>
+                                <color key="barTintColor" red="0.55294117649999996" green="0.77647058820000003" blue="0.2470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Streetview" id="USo-vm-yk3">
+                                        <barButtonItem key="leftBarButtonItem" title="Journeys" id="CJw-am-zoZ">
+                                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <segue destination="8s0-TB-EQe" kind="show" id="UzY-z3-kWE"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Settings" id="E5n-gb-a29">
+                                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <segue destination="AeU-nd-kS4" kind="show" id="6sk-LV-CyX"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
                         <color key="backgroundColor" red="0.90196078430000004" green="0.90588235289999997" blue="0.90980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="CY1-bJ-N86" firstAttribute="leading" secondItem="OBf-0d-heD" secondAttribute="leading" id="Q03-qU-pJW"/>
+                            <constraint firstItem="CY1-bJ-N86" firstAttribute="top" secondItem="OBf-0d-heD" secondAttribute="topMargin" id="S1z-Z7-qSc"/>
+                            <constraint firstAttribute="centerX" secondItem="CY1-bJ-N86" secondAttribute="centerX" id="uS7-a5-rMT"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Streetview" id="mIV-6c-b0E"/>
                     <navigationItem key="navigationItem" title="Title" id="lrR-Iu-1Np"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W2Q-0d-N5S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1838" y="-524"/>
+            <point key="canvasLocation" x="1838" y="-472"/>
         </scene>
         <!--Title-->
         <scene sceneID="rTR-BL-4Dh">
@@ -176,8 +214,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0xR-ub-KKs">
-                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0xR-ub-KKs">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="f9j-d5-bwX"/>
                                 </constraints>
@@ -190,9 +228,15 @@
                                     <navigationItem title="History" id="jvi-Ql-zMf">
                                         <barButtonItem key="leftBarButtonItem" title="Journeys" id="Yqo-pq-m2C">
                                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <connections>
+                                                <segue destination="8s0-TB-EQe" kind="show" id="z8k-82-Emt"/>
+                                            </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="Settings" id="1w0-9D-dDJ">
                                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <segue destination="AeU-nd-kS4" kind="show" id="aFy-NY-vQr"/>
+                                            </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
@@ -201,7 +245,8 @@
                         <color key="backgroundColor" red="0.90196078430000004" green="0.90588235289999997" blue="0.90980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="0xR-ub-KKs" secondAttribute="centerX" id="5Ga-rG-fcO"/>
-                            <constraint firstItem="0xR-ub-KKs" firstAttribute="top" secondItem="V0u-s5-4vl" secondAttribute="bottom" id="GF1-Tm-q9o"/>
+                            <constraint firstItem="0xR-ub-KKs" firstAttribute="leading" secondItem="EaP-oP-sAf" secondAttribute="leading" id="7mb-jL-JfR"/>
+                            <constraint firstItem="0xR-ub-KKs" firstAttribute="top" secondItem="V0u-s5-4vl" secondAttribute="bottom" constant="-20" id="GF1-Tm-q9o"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="history" id="EzF-1t-LUM"/>
@@ -232,6 +277,58 @@
             <point key="canvasLocation" x="1838" y="-1950"/>
         </scene>
         <!--View Controller-->
+        <scene sceneID="tSb-mS-512">
+            <objects>
+                <viewController id="AeU-nd-kS4" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uad-Ii-zsK"/>
+                        <viewControllerLayoutGuide type="bottom" id="e0y-aI-QNq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="EgM-Nf-EMG">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iyd-8x-Hso">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="cdC-xS-Mnu"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="Settings" id="TMc-s9-uqY">
+                                        <barButtonItem key="rightBarButtonItem" title="Done" id="Tqb-5Z-Lxc">
+                                            <connections>
+                                                <segue destination="x6V-Yd-W4G" kind="show" id="yiu-2m-zM9"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Iyd-8x-Hso" firstAttribute="leading" secondItem="EgM-Nf-EMG" secondAttribute="leading" id="BN8-fg-1qf"/>
+                            <constraint firstItem="Iyd-8x-Hso" firstAttribute="leading" secondItem="EgM-Nf-EMG" secondAttribute="leading" id="K2U-dX-6ZF"/>
+                            <constraint firstAttribute="centerX" secondItem="Iyd-8x-Hso" secondAttribute="centerX" id="SLW-3t-bYY"/>
+                            <constraint firstItem="e0y-aI-QNq" firstAttribute="top" secondItem="Iyd-8x-Hso" secondAttribute="bottom" constant="491" id="VIk-2L-NdM"/>
+                            <constraint firstItem="Iyd-8x-Hso" firstAttribute="top" secondItem="EgM-Nf-EMG" secondAttribute="top" id="WaR-ac-TwU"/>
+                            <constraint firstItem="e0y-aI-QNq" firstAttribute="top" secondItem="Iyd-8x-Hso" secondAttribute="bottom" constant="540" id="npc-SH-kNA"/>
+                            <constraint firstAttribute="trailing" secondItem="Iyd-8x-Hso" secondAttribute="trailing" id="vta-4R-Htr"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="BN8-fg-1qf"/>
+                                <exclude reference="vta-4R-Htr"/>
+                                <exclude reference="VIk-2L-NdM"/>
+                                <exclude reference="npc-SH-kNA"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="noV-he-285" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2557" y="-1950"/>
+        </scene>
+        <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="fs2014" customModuleProvider="target" sceneMemberID="viewController">
@@ -247,7 +344,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="837" y="-524"/>
+            <point key="canvasLocation" x="777" y="-1204"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="yiu-2m-zM9"/>
+        <segue reference="fLi-5S-82o"/>
+        <segue reference="qZR-mw-W0G"/>
+    </inferredMetricsTieBreakers>
 </document>
