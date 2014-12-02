@@ -317,7 +317,7 @@
                                     <navigationItem title="Settings" id="TMc-s9-uqY">
                                         <barButtonItem key="rightBarButtonItem" title="Done" id="Tqb-5Z-Lxc">
                                             <connections>
-                                                <segue destination="x6V-Yd-W4G" kind="show" id="yiu-2m-zM9"/>
+                                                <segue destination="ofY-lF-dVm" kind="show" id="k9O-Jc-6Rg"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -350,8 +350,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="qZR-mw-W0G"/>
-        <segue reference="yiu-2m-zM9"/>
+        <segue reference="k9O-Jc-6Rg"/>
         <segue reference="fLi-5S-82o"/>
+        <segue reference="qZR-mw-W0G"/>
     </inferredMetricsTieBreakers>
 </document>
