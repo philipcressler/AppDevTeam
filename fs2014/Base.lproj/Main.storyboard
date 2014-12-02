@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="8s0-TB-EQe">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="8s0-TB-EQe">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tHL-aZ-Kx6">
-                                <rect key="frame" x="10" y="506" width="580" height="35"/>
+                                <rect key="frame" x="10" y="555" width="580" height="35"/>
                                 <color key="backgroundColor" red="0.81960784313725488" green="0.82745098039215681" blue="0.83137254901960789" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="KBP-Yc-Zmt"/>
@@ -33,7 +33,7 @@
                                 </connections>
                             </button>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qef-fl-hW5">
-                                <rect key="frame" x="10" y="334" width="580" height="162"/>
+                                <rect key="frame" x="10" y="383" width="580" height="162"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="162" id="7SP-eU-2j8"/>
@@ -53,20 +53,39 @@
                                     <navigationItem title="Journey+" id="X4M-Eh-pOr"/>
                                 </items>
                             </navigationBar>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="rdi-DR-glw">
+                                <rect key="frame" x="10" y="355" width="580" height="19"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="18" id="RvC-N1-0eo"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Longest to Shortest"/>
+                                    <segment title="Shortest to Longest"/>
+                                </segments>
+                                <color key="tintColor" red="0.55294117649999996" green="0.77647058820000003" blue="0.2470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="sortJourneys:" destination="8s0-TB-EQe" eventType="valueChanged" id="Cf8-3o-fyk"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" red="0.90196078431372551" green="0.90588235294117647" blue="0.90980392156862744" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="qef-fl-hW5" secondAttribute="trailing" constant="-6" id="0Pq-Z3-sN3"/>
                             <constraint firstItem="qXG-7U-EOs" firstAttribute="top" secondItem="tHL-aZ-Kx6" secondAttribute="bottom" constant="10" id="24N-CU-RBs"/>
                             <constraint firstAttribute="centerX" secondItem="tHL-aZ-Kx6" secondAttribute="centerX" id="309-hM-LAd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rdi-DR-glw" secondAttribute="trailing" constant="-6" id="FJm-da-Iza"/>
                             <constraint firstItem="tHL-aZ-Kx6" firstAttribute="leading" secondItem="c3r-nB-zsQ" secondAttribute="leadingMargin" constant="10" id="GFx-fk-zsJ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="tHL-aZ-Kx6" secondAttribute="trailing" constant="10" id="JaB-KY-pT0"/>
                             <constraint firstAttribute="trailingMargin" secondItem="tHL-aZ-Kx6" secondAttribute="trailing" constant="-6" id="N25-oP-UQV"/>
                             <constraint firstAttribute="centerX" secondItem="qef-fl-hW5" secondAttribute="centerX" id="Ns1-Dq-c2v"/>
                             <constraint firstItem="tHL-aZ-Kx6" firstAttribute="leading" secondItem="c3r-nB-zsQ" secondAttribute="leadingMargin" constant="-6" id="WEi-wf-z7l"/>
+                            <constraint firstItem="rdi-DR-glw" firstAttribute="leading" secondItem="c3r-nB-zsQ" secondAttribute="leadingMargin" constant="-6" id="WIc-Mx-pNW"/>
+                            <constraint firstItem="qef-fl-hW5" firstAttribute="top" secondItem="rdi-DR-glw" secondAttribute="bottom" constant="10" id="drG-00-F3l"/>
                             <constraint firstItem="qXG-7U-EOs" firstAttribute="top" secondItem="SpH-4F-vna" secondAttribute="bottom" constant="536" id="fB9-cc-RtN"/>
                             <constraint firstAttribute="trailingMargin" secondItem="SpH-4F-vna" secondAttribute="trailing" constant="-16" id="gUB-Ta-sUe"/>
                             <constraint firstItem="qef-fl-hW5" firstAttribute="leading" secondItem="c3r-nB-zsQ" secondAttribute="leadingMargin" constant="-6" id="ifx-Gk-ahD"/>
+                            <constraint firstAttribute="centerX" secondItem="rdi-DR-glw" secondAttribute="centerX" constant="-0.5" id="lZt-rQ-aQg"/>
                             <constraint firstItem="qXG-7U-EOs" firstAttribute="top" secondItem="SpH-4F-vna" secondAttribute="bottom" constant="536" id="mV0-eY-kDy"/>
                             <constraint firstAttribute="centerX" secondItem="SpH-4F-vna" secondAttribute="centerX" id="mhJ-jW-wWf"/>
                             <constraint firstItem="tHL-aZ-Kx6" firstAttribute="trailing" secondItem="c3r-nB-zsQ" secondAttribute="trailingMargin" constant="10" id="nar-xH-jO5"/>
@@ -87,13 +106,14 @@
                     </view>
                     <connections>
                         <outlet property="journeyPicker" destination="qef-fl-hW5" id="d5y-6P-iLf"/>
+                        <outlet property="segmentedControl" destination="rdi-DR-glw" id="O5p-J4-iCb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FpB-jS-91v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1125" y="-1950"/>
         </scene>
-        <!--Dashboard-->
+        <!--Dashboard View Controller-->
         <scene sceneID="HOC-lh-aqa">
             <objects>
                 <viewController id="x6V-Yd-W4G" customClass="DashboardViewController" customModule="fs2014" customModuleProvider="target" sceneMemberID="viewController">
@@ -140,7 +160,7 @@
                             <constraint firstItem="gwY-uB-vTN" firstAttribute="top" secondItem="TRL-Wj-bKI" secondAttribute="bottom" constant="-20" id="yfs-3M-j7U"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Dashboard" id="qbP-E8-pVf"/>
+                    <tabBarItem key="tabBarItem" systemItem="search" id="qbP-E8-pVf"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
@@ -328,28 +348,10 @@
             </objects>
             <point key="canvasLocation" x="2557" y="-1950"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="ufC-wZ-h7g">
-            <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="fs2014" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
-                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="777" y="-1204"/>
-        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="qZR-mw-W0G"/>
         <segue reference="yiu-2m-zM9"/>
         <segue reference="fLi-5S-82o"/>
-        <segue reference="qZR-mw-W0G"/>
     </inferredMetricsTieBreakers>
 </document>

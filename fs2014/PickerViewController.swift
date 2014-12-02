@@ -11,15 +11,19 @@ import UIKit
 class PickerViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
 
     @IBOutlet weak var journeyPicker: UIPickerView!
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
     
-    // Just for test purposes..
-    // Will add images (stamps) when they add the vector images..
-    let journies = ["Las Vegas Strip", "Road to Hana", "Grand Canyon", "California", "Route 66"]
+    //var journies = ["Route 66 - 2,451 miles", "California - 556 miles", "Grand Canyon - 277 miles", "Road to Hana - 64 miles", "Las Vegas Strip - 6 miles"]
     
     // On button press, switches to dashboardViewController 
     @IBAction func toDashboardView(sender: AnyObject) {
         let vc = DashboardViewController(nibName: "DashboardViewController", bundle: nil)
         navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    // Changes sort of picker based on segmented control selection.
+    @IBAction func sortJourneys(sender:UISegmentedControl) {
+        self.journeyPicker.reloadAllComponents()
     }
     
     override func viewDidLoad() {
@@ -39,10 +43,22 @@ class PickerViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
         return 1
     }
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        var journies = ["Route 66 - 2,451 miles", "California - 556 miles", "Grand Canyon - 277 miles", "Road to Hana - 64 miles", "Las Vegas Strip - 6 miles"]
+        
+        if segmentedControl.selectedSegmentIndex == 1 {
+            journies = ["Las Vegas Strip - 6 miles", "Road to Hana - 64 miles", "Grand Canyon - 277 miles", "California - 556 miles", "Route 66 - 2,451 miles"]
+        }
+        
         return journies.count
     }
     
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
+        var journies = ["Route 66 - 2,451 miles", "California - 556 miles", "Grand Canyon - 277 miles", "Road to Hana - 64 miles", "Las Vegas Strip - 6 miles"]
+
+        if segmentedControl.selectedSegmentIndex == 1 {
+            journies = ["Las Vegas Strip - 6 miles", "Road to Hana - 64 miles", "Grand Canyon - 277 miles", "California - 556 miles", "Route 66 - 2,451 miles"]
+        }
+        
         return journies[row]
     }
     
