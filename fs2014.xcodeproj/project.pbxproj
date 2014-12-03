@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		350308E219F9761100A35D60 /* HealthKitHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350308E119F9761100A35D60 /* HealthKitHandler.swift */; };
 		35D0FE5A19F6DD260094AE75 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D0FE5919F6DD260094AE75 /* AppDelegate.swift */; };
-		35D0FE5C19F6DD260094AE75 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D0FE5B19F6DD260094AE75 /* ViewController.swift */; };
 		35D0FE5F19F6DD260094AE75 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35D0FE5D19F6DD260094AE75 /* Main.storyboard */; };
 		35D0FE6119F6DD260094AE75 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35D0FE6019F6DD260094AE75 /* Images.xcassets */; };
 		35D0FE6419F6DD260094AE75 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35D0FE6219F6DD260094AE75 /* LaunchScreen.xib */; };
@@ -51,7 +50,6 @@
 		35D0FE5419F6DD260094AE75 /* fs2014.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fs2014.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35D0FE5819F6DD260094AE75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		35D0FE5919F6DD260094AE75 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		35D0FE5B19F6DD260094AE75 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		35D0FE5E19F6DD260094AE75 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		35D0FE6019F6DD260094AE75 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		35D0FE6319F6DD260094AE75 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -140,7 +138,6 @@
 				38F138BF1A15A8F5004C128A /* DashboardViewController.swift */,
 				388D6A8B1A16D6340017CC59 /* StreetViewViewController.swift */,
 				388D6A8D1A16D6500017CC59 /* HistoryViewController.swift */,
-				35D0FE5B19F6DD260094AE75 /* ViewController.swift */,
 				350308E119F9761100A35D60 /* HealthKitHandler.swift */,
 				35D0FE5D19F6DD260094AE75 /* Main.storyboard */,
 				35D0FE7919F6DD3D0094AE75 /* fs2014.entitlements */,
@@ -309,7 +306,6 @@
 				38F138C01A15A8F5004C128A /* DashboardViewController.swift in Sources */,
 				388D6A8C1A16D6340017CC59 /* StreetViewViewController.swift in Sources */,
 				350308E219F9761100A35D60 /* HealthKitHandler.swift in Sources */,
-				35D0FE5C19F6DD260094AE75 /* ViewController.swift in Sources */,
 				388D6A8E1A16D6500017CC59 /* HistoryViewController.swift in Sources */,
 				35D0FE5A19F6DD260094AE75 /* AppDelegate.swift in Sources */,
 			);
