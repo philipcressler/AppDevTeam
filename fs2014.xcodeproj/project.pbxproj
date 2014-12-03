@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		350308E219F9761100A35D60 /* HealthKitHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350308E119F9761100A35D60 /* HealthKitHandler.swift */; };
-		3565435E19FED9E700243FC6 /* Journey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3565435D19FED9E700243FC6 /* Journey.swift */; };
-		3565436019FEDBE300243FC6 /* JourneyHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3565435F19FEDBE200243FC6 /* JourneyHandler.swift */; };
 		35D0FE5A19F6DD260094AE75 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D0FE5919F6DD260094AE75 /* AppDelegate.swift */; };
 		35D0FE5C19F6DD260094AE75 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D0FE5B19F6DD260094AE75 /* ViewController.swift */; };
 		35D0FE5F19F6DD260094AE75 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35D0FE5D19F6DD260094AE75 /* Main.storyboard */; };
@@ -50,8 +48,6 @@
 
 /* Begin PBXFileReference section */
 		350308E119F9761100A35D60 /* HealthKitHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthKitHandler.swift; sourceTree = "<group>"; };
-		3565435D19FED9E700243FC6 /* Journey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Journey.swift; sourceTree = "<group>"; };
-		3565435F19FEDBE200243FC6 /* JourneyHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JourneyHandler.swift; sourceTree = "<group>"; };
 		35D0FE5419F6DD260094AE75 /* fs2014.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fs2014.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35D0FE5819F6DD260094AE75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		35D0FE5919F6DD260094AE75 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -146,8 +142,6 @@
 				388D6A8D1A16D6500017CC59 /* HistoryViewController.swift */,
 				35D0FE5B19F6DD260094AE75 /* ViewController.swift */,
 				350308E119F9761100A35D60 /* HealthKitHandler.swift */,
-				3565435D19FED9E700243FC6 /* Journey.swift */,
-				3565435F19FEDBE200243FC6 /* JourneyHandler.swift */,
 				35D0FE5D19F6DD260094AE75 /* Main.storyboard */,
 				35D0FE7919F6DD3D0094AE75 /* fs2014.entitlements */,
 				35D0FE6019F6DD260094AE75 /* Images.xcassets */,
@@ -314,12 +308,10 @@
 				38F138BE1A156A7A004C128A /* PickerViewController.swift in Sources */,
 				38F138C01A15A8F5004C128A /* DashboardViewController.swift in Sources */,
 				388D6A8C1A16D6340017CC59 /* StreetViewViewController.swift in Sources */,
-				3565435E19FED9E700243FC6 /* Journey.swift in Sources */,
 				350308E219F9761100A35D60 /* HealthKitHandler.swift in Sources */,
 				35D0FE5C19F6DD260094AE75 /* ViewController.swift in Sources */,
 				388D6A8E1A16D6500017CC59 /* HistoryViewController.swift in Sources */,
 				35D0FE5A19F6DD260094AE75 /* AppDelegate.swift in Sources */,
-				3565436019FEDBE300243FC6 /* JourneyHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
