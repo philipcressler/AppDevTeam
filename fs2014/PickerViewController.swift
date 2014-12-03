@@ -12,8 +12,7 @@ class PickerViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
 
     @IBOutlet weak var journeyPicker: UIPickerView!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
-    
-    //var journies = ["Route 66 - 2,451 miles", "California - 556 miles", "Grand Canyon - 277 miles", "Road to Hana - 64 miles", "Las Vegas Strip - 6 miles"]
+    @IBOutlet weak var journeyStamps: UIImageView!
     
     // On button press, switches to dashboardViewController 
     @IBAction func toDashboardView(sender: AnyObject) {
@@ -28,7 +27,7 @@ class PickerViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         journeyPicker.delegate = self
         journeyPicker.dataSource = self
@@ -42,6 +41,7 @@ class PickerViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
         return 1
     }
+
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         var journies = ["Route 66 - 2,451 miles", "California - 556 miles", "Grand Canyon - 277 miles", "Road to Hana - 64 miles", "Las Vegas Strip - 6 miles"]
         
@@ -53,13 +53,14 @@ class PickerViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     }
     
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
-        var journies = ["Route 66 - 2,451 miles", "California - 556 miles", "Grand Canyon - 277 miles", "Road to Hana - 64 miles", "Las Vegas Strip - 6 miles"]
+        var journies:[(route:String, image:String)] = [("Route 66 - 2,451 miles", "route66-stamp.pdf"), ("California - 556 miles", "california-stamp.pdf"), ("Grand Canyon - 277 miles", "grandcanyon-stamp.pdf"), ("Road to Hana - 64 miles", "roadtohana-stamp.pdf"), ("Las Vegas Strip - 6 miles", "lasvegas-stamp.pdf")]
 
         if segmentedControl.selectedSegmentIndex == 1 {
-            journies = ["Las Vegas Strip - 6 miles", "Road to Hana - 64 miles", "Grand Canyon - 277 miles", "California - 556 miles", "Route 66 - 2,451 miles"]
+            journies = [("Las Vegas Strip - 6 miles", "lasvegas-stamp.pdf"), ("Road to Hana - 64 miles", "roadtohana-stamp.pdf"), ("Grand Canyon - 277 miles", "grandcanyon-stamp.pdf"), ("California - 556 miles", "california-stamp.pdf"), ("Route 66 - 2,451 miles", "route66-stamp.pdf")]
         }
         
-        return journies[row]
+        journeyStamps.image = UIImage(named: journies[row].image)
+        return journies[row].route
     }
     
     /*

@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tHL-aZ-Kx6">
-                                <rect key="frame" x="10" y="555" width="580" height="35"/>
+                                <rect key="frame" x="10" y="506" width="580" height="35"/>
                                 <color key="backgroundColor" red="0.81960784313725488" green="0.82745098039215681" blue="0.83137254901960789" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="KBP-Yc-Zmt"/>
@@ -33,7 +33,7 @@
                                 </connections>
                             </button>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qef-fl-hW5">
-                                <rect key="frame" x="10" y="383" width="580" height="162"/>
+                                <rect key="frame" x="10" y="334" width="580" height="162"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="162" id="7SP-eU-2j8"/>
@@ -54,7 +54,7 @@
                                 </items>
                             </navigationBar>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="rdi-DR-glw">
-                                <rect key="frame" x="10" y="355" width="580" height="19"/>
+                                <rect key="frame" x="10" y="306" width="580" height="19"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="18" id="RvC-N1-0eo"/>
@@ -68,6 +68,9 @@
                                     <action selector="sortJourneys:" destination="8s0-TB-EQe" eventType="valueChanged" id="Cf8-3o-fyk"/>
                                 </connections>
                             </segmentedControl>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aXN-bK-anp">
+                                <rect key="frame" x="10" y="70" width="580" height="226"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.90196078431372551" green="0.90588235294117647" blue="0.90980392156862744" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -79,22 +82,27 @@
                             <constraint firstAttribute="trailingMargin" secondItem="tHL-aZ-Kx6" secondAttribute="trailing" constant="10" id="JaB-KY-pT0"/>
                             <constraint firstAttribute="trailingMargin" secondItem="tHL-aZ-Kx6" secondAttribute="trailing" constant="-6" id="N25-oP-UQV"/>
                             <constraint firstAttribute="centerX" secondItem="qef-fl-hW5" secondAttribute="centerX" id="Ns1-Dq-c2v"/>
+                            <constraint firstItem="aXN-bK-anp" firstAttribute="top" secondItem="SpH-4F-vna" secondAttribute="bottom" constant="10" id="Qpv-vR-gwZ"/>
+                            <constraint firstItem="aXN-bK-anp" firstAttribute="leading" secondItem="c3r-nB-zsQ" secondAttribute="leadingMargin" constant="-6" id="W08-Tl-FbZ"/>
                             <constraint firstItem="tHL-aZ-Kx6" firstAttribute="leading" secondItem="c3r-nB-zsQ" secondAttribute="leadingMargin" constant="-6" id="WEi-wf-z7l"/>
                             <constraint firstItem="rdi-DR-glw" firstAttribute="leading" secondItem="c3r-nB-zsQ" secondAttribute="leadingMargin" constant="-6" id="WIc-Mx-pNW"/>
                             <constraint firstItem="qef-fl-hW5" firstAttribute="top" secondItem="rdi-DR-glw" secondAttribute="bottom" constant="10" id="drG-00-F3l"/>
                             <constraint firstItem="qXG-7U-EOs" firstAttribute="top" secondItem="SpH-4F-vna" secondAttribute="bottom" constant="536" id="fB9-cc-RtN"/>
                             <constraint firstAttribute="trailingMargin" secondItem="SpH-4F-vna" secondAttribute="trailing" constant="-16" id="gUB-Ta-sUe"/>
                             <constraint firstItem="qef-fl-hW5" firstAttribute="leading" secondItem="c3r-nB-zsQ" secondAttribute="leadingMargin" constant="-6" id="ifx-Gk-ahD"/>
-                            <constraint firstAttribute="centerX" secondItem="rdi-DR-glw" secondAttribute="centerX" constant="-0.5" id="lZt-rQ-aQg"/>
+                            <constraint firstAttribute="centerX" secondItem="rdi-DR-glw" secondAttribute="centerX" id="lZt-rQ-aQg"/>
                             <constraint firstItem="qXG-7U-EOs" firstAttribute="top" secondItem="SpH-4F-vna" secondAttribute="bottom" constant="536" id="mV0-eY-kDy"/>
                             <constraint firstAttribute="centerX" secondItem="SpH-4F-vna" secondAttribute="centerX" id="mhJ-jW-wWf"/>
                             <constraint firstItem="tHL-aZ-Kx6" firstAttribute="trailing" secondItem="c3r-nB-zsQ" secondAttribute="trailingMargin" constant="10" id="nar-xH-jO5"/>
                             <constraint firstItem="tHL-aZ-Kx6" firstAttribute="top" secondItem="qef-fl-hW5" secondAttribute="bottom" constant="10" id="r2d-eb-tKa"/>
                             <constraint firstItem="SpH-4F-vna" firstAttribute="leading" secondItem="c3r-nB-zsQ" secondAttribute="leadingMargin" constant="-16" id="sul-t9-7ga"/>
+                            <constraint firstItem="rdi-DR-glw" firstAttribute="top" secondItem="aXN-bK-anp" secondAttribute="bottom" constant="10" id="wVz-wk-dtJ"/>
                             <constraint firstItem="SpH-4F-vna" firstAttribute="top" secondItem="Yf7-Zs-Eoa" secondAttribute="bottom" constant="-20" id="wzh-MR-e4Y"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="aXN-bK-anp" secondAttribute="trailing" constant="-6" id="xtt-A6-YXE"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="lZt-rQ-aQg"/>
                                 <exclude reference="309-hM-LAd"/>
                                 <exclude reference="GFx-fk-zsJ"/>
                                 <exclude reference="JaB-KY-pT0"/>
@@ -106,6 +114,7 @@
                     </view>
                     <connections>
                         <outlet property="journeyPicker" destination="qef-fl-hW5" id="d5y-6P-iLf"/>
+                        <outlet property="journeyStamps" destination="aXN-bK-anp" id="E7S-Wg-Ef6"/>
                         <outlet property="segmentedControl" destination="rdi-DR-glw" id="O5p-J4-iCb"/>
                     </connections>
                 </viewController>
@@ -113,7 +122,7 @@
             </objects>
             <point key="canvasLocation" x="1125" y="-1950"/>
         </scene>
-        <!--Dashboard View Controller-->
+        <!--Dashboard-->
         <scene sceneID="HOC-lh-aqa">
             <objects>
                 <viewController id="x6V-Yd-W4G" customClass="DashboardViewController" customModule="fs2014" customModuleProvider="target" sceneMemberID="viewController">
@@ -160,7 +169,7 @@
                             <constraint firstItem="gwY-uB-vTN" firstAttribute="top" secondItem="TRL-Wj-bKI" secondAttribute="bottom" constant="-20" id="yfs-3M-j7U"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="search" id="qbP-E8-pVf"/>
+                    <tabBarItem key="tabBarItem" tag="1" title="Dashboard" image="Dashboard-Icon-Gray-22px" selectedImage="Dashboard-Icon-Gray-22px" id="qbP-E8-pVf"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
@@ -215,7 +224,7 @@
                             <constraint firstAttribute="centerX" secondItem="CY1-bJ-N86" secondAttribute="centerX" id="uS7-a5-rMT"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Streetview" id="mIV-6c-b0E"/>
+                    <tabBarItem key="tabBarItem" title="Streetview" image="Streetview-Icon-Gray-22px" selectedImage="Streetview-Icon-Gray-22px" id="mIV-6c-b0E"/>
                     <navigationItem key="navigationItem" title="Title" id="lrR-Iu-1Np"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W2Q-0d-N5S" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -289,7 +298,7 @@
                     <connections>
                         <segue destination="x6V-Yd-W4G" kind="relationship" relationship="viewControllers" id="yUE-lm-vR5"/>
                         <segue destination="Xhz-PD-rjT" kind="relationship" relationship="viewControllers" id="V1O-Ld-9Su"/>
-                        <segue destination="ZDe-Ei-1KF" kind="relationship" relationship="viewControllers" id="GHP-bQ-nhg"/>
+                        <segue destination="ZDe-Ei-1KF" kind="relationship" relationship="viewControllers" id="xgs-in-Ynj"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pYb-bI-b4D" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -349,9 +358,13 @@
             <point key="canvasLocation" x="2557" y="-1950"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Dashboard-Icon-Gray-22px" width="22" height="22"/>
+        <image name="Streetview-Icon-Gray-22px" width="22" height="22"/>
+    </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="k9O-Jc-6Rg"/>
-        <segue reference="fLi-5S-82o"/>
+        <segue reference="xLW-gX-WLs"/>
         <segue reference="qZR-mw-W0G"/>
+        <segue reference="fLi-5S-82o"/>
     </inferredMetricsTieBreakers>
 </document>
