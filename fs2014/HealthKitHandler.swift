@@ -17,9 +17,12 @@ class HealthKitHandler: NSObject {
     var stepSum: HKQuantity?
     //total miles based on total steps divided by 2112
     var miles: Double?
-    
+    //used for background fetch
+    var stepSumSinceAppTermination:HKQuantity?
     //the data type that we are pulling from healthkit
     let readDataTypes = NSSet(array: [HKQuantityType.quantityTypeForIdentifier(HKQuantityTypeIdentifierStepCount)])
+    //nsdate of app pushed to background
+    var timeOfAppTermination: NSDate?
     
     //func that requests healthkit authorization and if successful calls retrieveStepData() func
     func setupHealthStoreIfPossible(){
@@ -27,9 +30,12 @@ class HealthKitHandler: NSObject {
         healthStore?.requestAuthorizationToShareTypes(nil, readTypes: readDataTypes, completion: {(success, error) in
             if success {
                 println("User completed authorisation request")
+               
                 dispatch_async(dispatch_get_main_queue(), {
                     self.retrieveStepData()
                 })
+                
+
             } else{
                 println("the user cancelled the authorisation request \(error)")
             }
@@ -48,22 +54,51 @@ class HealthKitHandler: NSObject {
             let stepSampleType = HKSampleType.quantityTypeForIdentifier(HKQuantityTypeIdentifierStepCount)
             let predicate = HKQuery.predicateForSamplesWithStartDate(startDate, endDate: endDate, options: .None)
             let sumOptions = HKStatisticsOptions.CumulativeSum
-        let query = HKStatisticsQuery(quantityType: stepSampleType, quantitySamplePredicate: predicate, options: sumOptions, completionHandler:{
+            let query = HKStatisticsQuery(quantityType: stepSampleType, quantitySamplePredicate: predicate, options: sumOptions, completionHandler:{
                 (query, results, error) in
                 if (results == nil) {
                     println("There was an error running the query: \(error)")
                 }
                 dispatch_async(dispatch_get_main_queue(), {
                     self.stepSum = results.sumQuantity()
-                  //  println("\(self.stepSum!)")
+                    //println("\(self.stepSum!)")
                     if(self.stepSum != nil){
                     self.miles = self.stepSum!.doubleValueForUnit(HKUnit.countUnit()) / 2112
                     }
-                  //  println("\(self.miles)");
+                    //println("\(self.miles)");
                 })
             })
             self.healthStore?.executeQuery(query)
     }
 
+    func backgroundFetch(timeOfAppTermination: NSDate)
+    {
+        
     
-}
+                let endDate = NSDate()
+                println(timeOfAppTermination)
+                println(endDate)
+                let stepSampleType = HKSampleType.quantityTypeForIdentifier(HKQuantityTypeIdentifierStepCount)
+                let predicate = HKQuery.predicateForSamplesWithStartDate(timeOfAppTermination, endDate: endDate, options: .None)
+                let sumOptions = HKStatisticsOptions.CumulativeSum
+                let query = HKStatisticsQuery(quantityType: stepSampleType, quantitySamplePredicate: predicate, options: sumOptions, completionHandler: {
+                    (query, results, error) in
+                    if(results == nil){
+                        println("There was an error running the query: \(error)")
+                    }
+                    else{
+                        self.stepSumSinceAppTermination = results.sumQuantity()
+                        if(self.stepSumSinceAppTermination != nil){
+                            println(self.stepSumSinceAppTermination!)
+                            var localNotification:UILocalNotification = UILocalNotification()
+                            localNotification.alertAction = "Testing notifications on iOS8"
+                            localNotification.alertBody = "Step count : \(self.stepSumSinceAppTermination!)"
+                            localNotification.fireDate = NSDate(timeIntervalSinceNow: 1)
+                            UIApplication.sharedApplication().scheduleLocalNotification(localNotification)
+                        } else{ println("nil") }
+                        
+                    }})
+                self.healthStore?.executeQuery(query)
+            
+            }
+        }
