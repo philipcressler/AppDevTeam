@@ -8,12 +8,20 @@
 
 import UIKit
 
-class HistoryViewController: UIViewController {
+class HistoryViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    private let reuseIdentifier = "journeyStamp"
+    
+    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var historyCell: UICollectionViewCell!
+    
+    var stamps:[String] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        var stamps = ["california-stamp.pdf"]
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,7 +29,30 @@ class HistoryViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBAction func unwindToSegue(segue:UIStoryboardSegue) {}
+    
+    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        //return stamps.count
+        
+        return 1
+    }
+    
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        
+        var cell = collectionView.dequeueReusableCellWithReuseIdentifier("journeyStamp", forIndexPath: indexPath) as HistoryCellView
+        cell.stamp.image = UIImage(named: "california-stamp.pdf")
+        
+        return cell
+    }
+    
+    func collectionView(collectionView: UICollectionView, didDeselectItemAtIndexPath indexPath: NSIndexPath) {
+        
+    }
+    
     /*
     // MARK: - Navigation
 
