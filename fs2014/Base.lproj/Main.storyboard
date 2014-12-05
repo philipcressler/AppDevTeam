@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="8s0-TB-EQe">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="8s0-TB-EQe">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -334,7 +334,7 @@
                                     <navigationItem title="Settings" id="TMc-s9-uqY">
                                         <barButtonItem key="rightBarButtonItem" title="Done" id="Tqb-5Z-Lxc">
                                             <connections>
-                                                <segue destination="ofY-lF-dVm" kind="show" id="k9O-Jc-6Rg"/>
+                                                <segue destination="uNt-C3-HzG" kind="unwind" unwindAction="unwindToSegue:" id="cB9-t0-pz4"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -362,6 +362,7 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="noV-he-285" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="uNt-C3-HzG" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2557" y="-1950"/>
         </scene>
@@ -373,7 +374,6 @@
         <image name="Streetview-Icon-Gray-22px" width="22" height="22"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="xLW-gX-WLs"/>
         <segue reference="UzY-z3-kWE"/>
         <segue reference="6sk-LV-CyX"/>
     </inferredMetricsTieBreakers>

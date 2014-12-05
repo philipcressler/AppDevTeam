@@ -22,6 +22,8 @@ class StreetViewViewController: UIViewController {
     }
     
 
+    @IBAction func unwindToSegue(segue:UIStoryboardSegue) {}
+    
     /*
     // MARK: - Navigation
 
