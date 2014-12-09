@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="8s0-TB-EQe">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="8s0-TB-EQe">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -391,15 +391,14 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Mj-Ab-bZ7">
-                                <rect key="frame" x="0.0" y="458" width="300" height="44"/>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Mj-Ab-bZ7">
+                                <rect key="frame" x="0.0" y="458" width="299" height="44"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="GZJ-bT-hUh"/>
                                     <constraint firstAttribute="width" constant="300" id="NBR-78-oJO"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" title="Facebook">
+                                <state key="normal" title=" Facebook" image="facebook_color_22x22">
                                     <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -412,14 +411,14 @@
                                     <action selector="shareOnFacebook" destination="ZcP-Wu-kLp" eventType="touchUpInside" id="PhH-N5-rgF"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sKA-r3-0hR">
-                                <rect key="frame" x="300" y="458" width="300" height="44"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sKA-r3-0hR">
+                                <rect key="frame" x="301" y="458" width="299" height="44"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="37Y-70-Yxe"/>
                                     <constraint firstAttribute="width" constant="300" id="jRN-rI-RNs"/>
                                 </constraints>
-                                <state key="normal" title="Twitter">
+                                <state key="normal" title=" Twitter" image="twitter_color_22x22">
                                     <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -433,17 +432,16 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qsr-jx-q6E">
-                                <rect key="frame" x="10" y="70" width="580" height="324"/>
+                                <rect key="frame" x="10" y="70" width="580" height="332"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vll-6t-AXg">
-                                <rect key="frame" x="0.0" y="404" width="600" height="44"/>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vll-6t-AXg">
+                                <rect key="frame" x="0.0" y="412" width="600" height="44"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="5vD-oC-wxP"/>
                                     <constraint firstAttribute="height" constant="44" id="AiE-YL-U8x"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" title="Save to Photos">
+                                <state key="normal" title=" Save to Photos" image="photos_color_22x22">
                                     <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -469,7 +467,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="sKA-r3-0hR" secondAttribute="trailing" constant="-16" id="IiG-To-u3Y"/>
                             <constraint firstItem="fdv-Tn-1qd" firstAttribute="top" secondItem="sKA-r3-0hR" secondAttribute="bottom" constant="10" id="Nnu-p1-6op"/>
                             <constraint firstItem="qsr-jx-q6E" firstAttribute="top" secondItem="dVP-fa-CW6" secondAttribute="bottom" constant="10" id="OIh-sm-MsT"/>
-                            <constraint firstItem="sKA-r3-0hR" firstAttribute="top" secondItem="vll-6t-AXg" secondAttribute="bottom" constant="10" id="Pzr-nG-dj9"/>
+                            <constraint firstItem="sKA-r3-0hR" firstAttribute="top" secondItem="vll-6t-AXg" secondAttribute="bottom" constant="2" id="Pzr-nG-dj9"/>
                             <constraint firstAttribute="centerX" secondItem="vll-6t-AXg" secondAttribute="centerX" id="ZZE-B1-ltn"/>
                             <constraint firstItem="vll-6t-AXg" firstAttribute="leading" secondItem="JfW-in-16C" secondAttribute="leadingMargin" constant="-16" id="gIY-eR-bfW"/>
                             <constraint firstItem="fdv-Tn-1qd" firstAttribute="top" secondItem="5Mj-Ab-bZ7" secondAttribute="bottom" constant="10" id="ilX-Ct-w8u"/>
@@ -477,7 +475,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="qsr-jx-q6E" secondAttribute="trailing" constant="-6" id="mB1-xM-7jY"/>
                             <constraint firstAttribute="trailingMargin" secondItem="dVP-fa-CW6" secondAttribute="trailing" constant="-16" id="o7l-2q-G5u"/>
                             <constraint firstItem="qsr-jx-q6E" firstAttribute="leading" secondItem="JfW-in-16C" secondAttribute="leadingMargin" constant="-6" id="pU9-OM-gIX"/>
-                            <constraint firstItem="sKA-r3-0hR" firstAttribute="leading" secondItem="5Mj-Ab-bZ7" secondAttribute="trailing" id="qZG-XJ-sny"/>
+                            <constraint firstItem="sKA-r3-0hR" firstAttribute="leading" secondItem="5Mj-Ab-bZ7" secondAttribute="trailing" constant="2" id="qZG-XJ-sny"/>
                             <constraint firstItem="dVP-fa-CW6" firstAttribute="top" secondItem="JfW-in-16C" secondAttribute="topMargin" id="rtI-Ar-Njh"/>
                             <constraint firstAttribute="centerX" secondItem="fdv-Tn-1qd" secondAttribute="centerX" constant="3" id="tfB-Gr-lgG"/>
                             <constraint firstItem="fdv-Tn-1qd" firstAttribute="top" secondItem="MwU-nP-Mak" secondAttribute="bottom" id="uEZ-CL-a1T"/>
@@ -579,6 +577,9 @@
     <resources>
         <image name="Dashboard-Icon-Gray-22px" width="22" height="22"/>
         <image name="Streetview-Icon-Gray-22px" width="22" height="22"/>
+        <image name="facebook_color_22x22" width="22" height="22"/>
+        <image name="photos_color_22x22" width="22" height="22"/>
+        <image name="twitter_color_22x22" width="22" height="22"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="z8k-82-Emt"/>

@@ -13,7 +13,7 @@ import AssetsLibrary
 class HistoryDetailsViewController: UIViewController {
 
     @IBOutlet weak var journey: UIImageView!
-    var journeyImage = UIImage(named: "california-stamp.pdf")
+    var journeyImage = UIImage(named: "Cali_Postcard.pdf")
     
     override func viewDidLoad() {
         super.viewDidLoad()
