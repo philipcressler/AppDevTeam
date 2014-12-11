@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		350308E219F9761100A35D60 /* HealthKitHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350308E119F9761100A35D60 /* HealthKitHandler.swift */; };
 		3565435E19FED9E700243FC6 /* Journey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3565435D19FED9E700243FC6 /* Journey.swift */; };
-		3565436019FEDBE300243FC6 /* JourneyHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3565435F19FEDBE200243FC6 /* JourneyHandler.swift */; };
 		35D0FE5A19F6DD260094AE75 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D0FE5919F6DD260094AE75 /* AppDelegate.swift */; };
 		35D0FE5C19F6DD260094AE75 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D0FE5B19F6DD260094AE75 /* ViewController.swift */; };
 		35D0FE5F19F6DD260094AE75 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35D0FE5D19F6DD260094AE75 /* Main.storyboard */; };
@@ -20,7 +19,6 @@
 		388D6A8E1A16D6500017CC59 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388D6A8D1A16D6500017CC59 /* HistoryViewController.swift */; };
 		38F138BE1A156A7A004C128A /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F138BD1A156A7A004C128A /* PickerViewController.swift */; };
 		38F138C01A15A8F5004C128A /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F138BF1A15A8F5004C128A /* DashboardViewController.swift */; };
-		6B29D8E61A2E42AA0001F343 /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6B29D8E51A2E42AA0001F343 /* GoogleMaps.bundle */; };
 		6B29D9011A2E43A30001F343 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B29D8FD1A2E434A0001F343 /* SystemConfiguration.framework */; };
 		6B29D9021A2E43A30001F343 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B29D8FB1A2E433F0001F343 /* QuartzCore.framework */; };
 		6B29D9031A2E43A30001F343 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B29D8F91A2E43310001F343 /* OpenGLES.framework */; };
@@ -33,9 +31,15 @@
 		6B29D90A1A2E43A30001F343 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B29D8EB1A2E42EC0001F343 /* CoreLocation.framework */; };
 		6B29D90B1A2E43A30001F343 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B29D8E91A2E42E10001F343 /* CoreData.framework */; };
 		6B29D90C1A2E43A30001F343 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B29D8E71A2E42D70001F343 /* AVFoundation.framework */; };
-		6B29D90D1A2E43A30001F343 /* GoogleMaps.bundle in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B29D8E51A2E42AA0001F343 /* GoogleMaps.bundle */; };
 		6B29D90E1A2E43A30001F343 /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B29D8E31A2E42790001F343 /* GoogleMaps.framework */; };
 		6B29D90F1A2E43A30001F343 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35D0FE7A19F6DD3D0094AE75 /* HealthKit.framework */; };
+		6B29D9111A2E45A70001F343 /* JourneyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B29D9101A2E45A70001F343 /* JourneyViewController.swift */; };
+		6B29D91A1A2E4A000001F343 /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6B29D9191A2E4A000001F343 /* GoogleMaps.bundle */; };
+		6B5047721A3A0E0F00E06C2F /* journies.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 6B5047711A3A0E0F00E06C2F /* journies.sqlite */; };
+		6B5047791A3A2CF800E06C2F /* JourneyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5047781A3A2CF800E06C2F /* JourneyView.swift */; };
+		6B82490E1A335CCF00BFA3B4 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B82490D1A335CCF00BFA3B4 /* libsqlite3.dylib */; };
+		6BDBEC0A1A39F5FD00ED9A92 /* DBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BDBEC091A39F5FD00ED9A92 /* DBManager.m */; };
+		6BDBEC0C1A39F68600ED9A92 /* JourneyDatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDBEC0B1A39F68600ED9A92 /* JourneyDatabaseManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,7 +55,6 @@
 /* Begin PBXFileReference section */
 		350308E119F9761100A35D60 /* HealthKitHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthKitHandler.swift; sourceTree = "<group>"; };
 		3565435D19FED9E700243FC6 /* Journey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Journey.swift; sourceTree = "<group>"; };
-		3565435F19FEDBE200243FC6 /* JourneyHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JourneyHandler.swift; sourceTree = "<group>"; };
 		35D0FE5419F6DD260094AE75 /* fs2014.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fs2014.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35D0FE5819F6DD260094AE75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		35D0FE5919F6DD260094AE75 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -69,7 +72,6 @@
 		38F138BD1A156A7A004C128A /* PickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
 		38F138BF1A15A8F5004C128A /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		6B29D8E31A2E42790001F343 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMaps.framework; sourceTree = "<group>"; };
-		6B29D8E51A2E42AA0001F343 /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
 		6B29D8E71A2E42D70001F343 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		6B29D8E91A2E42E10001F343 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		6B29D8EB1A2E42EC0001F343 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -82,6 +84,15 @@
 		6B29D8F91A2E43310001F343 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		6B29D8FB1A2E433F0001F343 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		6B29D8FD1A2E434A0001F343 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		6B29D9101A2E45A70001F343 /* JourneyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JourneyViewController.swift; sourceTree = "<group>"; };
+		6B29D9161A2E48810001F343 /* ObjectiveCBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectiveCBridge.h; sourceTree = "<group>"; };
+		6B29D9191A2E4A000001F343 /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
+		6B5047711A3A0E0F00E06C2F /* journies.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = journies.sqlite; sourceTree = "<group>"; };
+		6B5047781A3A2CF800E06C2F /* JourneyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JourneyView.swift; sourceTree = "<group>"; };
+		6B82490D1A335CCF00BFA3B4 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		6BDBEC081A39F5FD00ED9A92 /* DBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBManager.h; sourceTree = "<group>"; };
+		6BDBEC091A39F5FD00ED9A92 /* DBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBManager.m; sourceTree = "<group>"; };
+		6BDBEC0B1A39F68600ED9A92 /* JourneyDatabaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JourneyDatabaseManager.swift; path = ../JourneyDatabaseManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B82490E1A335CCF00BFA3B4 /* libsqlite3.dylib in Frameworks */,
 				6B29D9011A2E43A30001F343 /* SystemConfiguration.framework in Frameworks */,
 				6B29D9021A2E43A30001F343 /* QuartzCore.framework in Frameworks */,
 				6B29D9031A2E43A30001F343 /* OpenGLES.framework in Frameworks */,
@@ -101,7 +113,6 @@
 				6B29D90A1A2E43A30001F343 /* CoreLocation.framework in Frameworks */,
 				6B29D90B1A2E43A30001F343 /* CoreData.framework in Frameworks */,
 				6B29D90C1A2E43A30001F343 /* AVFoundation.framework in Frameworks */,
-				6B29D90D1A2E43A30001F343 /* GoogleMaps.bundle in Frameworks */,
 				6B29D90E1A2E43A30001F343 /* GoogleMaps.framework in Frameworks */,
 				6B29D90F1A2E43A30001F343 /* HealthKit.framework in Frameworks */,
 			);
@@ -139,6 +150,7 @@
 		35D0FE5619F6DD260094AE75 /* fs2014 */ = {
 			isa = PBXGroup;
 			children = (
+				6B29D9161A2E48810001F343 /* ObjectiveCBridge.h */,
 				35D0FE5919F6DD260094AE75 /* AppDelegate.swift */,
 				38F138BD1A156A7A004C128A /* PickerViewController.swift */,
 				38F138BF1A15A8F5004C128A /* DashboardViewController.swift */,
@@ -147,8 +159,13 @@
 				35D0FE5B19F6DD260094AE75 /* ViewController.swift */,
 				350308E119F9761100A35D60 /* HealthKitHandler.swift */,
 				3565435D19FED9E700243FC6 /* Journey.swift */,
-				3565435F19FEDBE200243FC6 /* JourneyHandler.swift */,
+				6B5047781A3A2CF800E06C2F /* JourneyView.swift */,
+				6B29D9101A2E45A70001F343 /* JourneyViewController.swift */,
+				6BDBEC0B1A39F68600ED9A92 /* JourneyDatabaseManager.swift */,
+				6BDBEC081A39F5FD00ED9A92 /* DBManager.h */,
+				6BDBEC091A39F5FD00ED9A92 /* DBManager.m */,
 				35D0FE5D19F6DD260094AE75 /* Main.storyboard */,
+				6B5047711A3A0E0F00E06C2F /* journies.sqlite */,
 				35D0FE7919F6DD3D0094AE75 /* fs2014.entitlements */,
 				35D0FE6019F6DD260094AE75 /* Images.xcassets */,
 				35D0FE6219F6DD260094AE75 /* LaunchScreen.xib */,
@@ -185,6 +202,8 @@
 		6B29D8FF1A2E436D0001F343 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6B82490D1A335CCF00BFA3B4 /* libsqlite3.dylib */,
+				6B29D9191A2E4A000001F343 /* GoogleMaps.bundle */,
 				6B29D8FD1A2E434A0001F343 /* SystemConfiguration.framework */,
 				6B29D8FB1A2E433F0001F343 /* QuartzCore.framework */,
 				6B29D8F91A2E43310001F343 /* OpenGLES.framework */,
@@ -197,7 +216,6 @@
 				6B29D8EB1A2E42EC0001F343 /* CoreLocation.framework */,
 				6B29D8E91A2E42E10001F343 /* CoreData.framework */,
 				6B29D8E71A2E42D70001F343 /* AVFoundation.framework */,
-				6B29D8E51A2E42AA0001F343 /* GoogleMaps.bundle */,
 				6B29D8E31A2E42790001F343 /* GoogleMaps.framework */,
 				35D0FE7A19F6DD3D0094AE75 /* HealthKit.framework */,
 			);
@@ -290,10 +308,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B5047721A3A0E0F00E06C2F /* journies.sqlite in Resources */,
 				35D0FE5F19F6DD260094AE75 /* Main.storyboard in Resources */,
 				35D0FE6419F6DD260094AE75 /* LaunchScreen.xib in Resources */,
 				35D0FE6119F6DD260094AE75 /* Images.xcassets in Resources */,
-				6B29D8E61A2E42AA0001F343 /* GoogleMaps.bundle in Resources */,
+				6B29D91A1A2E4A000001F343 /* GoogleMaps.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,15 +330,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BDBEC0C1A39F68600ED9A92 /* JourneyDatabaseManager.swift in Sources */,
 				38F138BE1A156A7A004C128A /* PickerViewController.swift in Sources */,
 				38F138C01A15A8F5004C128A /* DashboardViewController.swift in Sources */,
+				6B5047791A3A2CF800E06C2F /* JourneyView.swift in Sources */,
 				388D6A8C1A16D6340017CC59 /* StreetViewViewController.swift in Sources */,
 				3565435E19FED9E700243FC6 /* Journey.swift in Sources */,
 				350308E219F9761100A35D60 /* HealthKitHandler.swift in Sources */,
+				6B29D9111A2E45A70001F343 /* JourneyViewController.swift in Sources */,
 				35D0FE5C19F6DD260094AE75 /* ViewController.swift in Sources */,
 				388D6A8E1A16D6500017CC59 /* HistoryViewController.swift in Sources */,
 				35D0FE5A19F6DD260094AE75 /* AppDelegate.swift in Sources */,
-				3565436019FEDBE300243FC6 /* JourneyHandler.swift in Sources */,
+				6BDBEC0A1A39F5FD00ED9A92 /* DBManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,6 +464,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = fs2014/fs2014.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -453,6 +476,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = fs2014/ObjectiveCBridge.h;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -460,6 +485,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = fs2014/fs2014.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -471,6 +497,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = fs2014/ObjectiveCBridge.h;
 			};
 			name = Release;
 		};

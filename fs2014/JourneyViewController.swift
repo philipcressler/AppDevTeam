@@ -1,20 +1,21 @@
 //
-//  DashboardViewController.swift
+//  JourneyViewController.swift
 //  fs2014
 //
-//  Created by Jerrod Carpenter on 11/13/14.
+//  Created by Patrick McAvoy on 12/2/14.
 //  Copyright (c) 2014 Philip Cressler. All rights reserved.
 //
 
 import UIKit
 
-class DashboardViewController: UIViewController {
-
+class JourneyViewController: UIViewController {
+    @IBOutlet weak var mapView: GMSMapView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+
         // Do any additional setup after loading the view.
-        
-        self.view.
+//        updateMapView()
     }
 
     override func didReceiveMemoryWarning() {

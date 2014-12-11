@@ -10,6 +10,7 @@ import UIKit
 
 class PickerViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
 
+    @IBOutlet weak var mapView: UIView!
     @IBOutlet weak var journeyPicker: UIPickerView!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     
@@ -32,6 +33,8 @@ class PickerViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
         // Do any additional setup after loading the view.
         journeyPicker.delegate = self
         journeyPicker.dataSource = self
+        
+        updateMapView()
     }
 
     override func didReceiveMemoryWarning() {
@@ -61,6 +64,36 @@ class PickerViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
         
         return journies[row]
     }
+    
+    func updateMapView(){
+        let coordinatesObjects = JourneyDatabaseManager().getCoordinates()
+        let middleCoordinate = coordinatesObjects.count / 2
+        let middleLongitude = coordinatesObjects[middleCoordinate].objectAtIndex(0) as Double
+        let middleLatitude = coordinatesObjects[middleCoordinate].objectAtIndex(1) as Double
+        
+        let mapTarget = CLLocationCoordinate2D(latitude: middleLatitude, longitude:middleLongitude)
+        var camera = GMSCameraPosition.cameraWithTarget(mapTarget, zoom: 1)
+        mapView.camera = camera
+        
+        var path = GMSMutablePath()
+        var theLatitude: Double?
+        var theLongitude: Double?
+        
+        for coordinate in coordinatesObjects as [AnyObject] {
+            theLongitude = coordinate.objectAtIndex(0) as Double
+            theLatitude = coordinate.objectAtIndex(1) as Double
+            path.addLatitude(theLatitude!, longitude: theLongitude!)
+        }
+        
+        
+        
+        var polyline = GMSPolyline(path: path)
+        polyline.strokeColor = UIColor.blueColor()
+        polyline.strokeWidth = 5.0
+        polyline.map = mapView
+        
+    }
+
     
     /*
     // MARK: - Navigation

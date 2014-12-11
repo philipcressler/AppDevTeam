@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tHL-aZ-Kx6">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tHL-aZ-Kx6">
                                 <rect key="frame" x="10" y="555" width="580" height="35"/>
                                 <color key="backgroundColor" red="0.81960784313725488" green="0.82745098039215681" blue="0.83137254901960789" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -32,7 +32,7 @@
                                     <segue destination="ofY-lF-dVm" kind="show" id="xLW-gX-WLs"/>
                                 </connections>
                             </button>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qef-fl-hW5">
+                            <pickerView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qef-fl-hW5">
                                 <rect key="frame" x="10" y="383" width="580" height="162"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -53,7 +53,7 @@
                                     <navigationItem title="Journey+" id="X4M-Eh-pOr"/>
                                 </items>
                             </navigationBar>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="rdi-DR-glw">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="rdi-DR-glw">
                                 <rect key="frame" x="10" y="355" width="580" height="19"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -68,6 +68,10 @@
                                     <action selector="sortJourneys:" destination="8s0-TB-EQe" eventType="valueChanged" id="Cf8-3o-fyk"/>
                                 </connections>
                             </segmentedControl>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gOs-Mq-Bbr" customClass="GMSMapView">
+                                <rect key="frame" x="150" y="54" width="300" height="300"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.90196078431372551" green="0.90588235294117647" blue="0.90980392156862744" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -106,6 +110,7 @@
                     </view>
                     <connections>
                         <outlet property="journeyPicker" destination="qef-fl-hW5" id="d5y-6P-iLf"/>
+                        <outlet property="mapView" destination="gOs-Mq-Bbr" id="7Mt-yn-elf"/>
                         <outlet property="segmentedControl" destination="rdi-DR-glw" id="O5p-J4-iCb"/>
                     </connections>
                 </viewController>
@@ -167,6 +172,37 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yd8-Iu-RdL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1483" y="-1204"/>
+        </scene>
+        <!--Journey View Controller-->
+        <scene sceneID="5Tk-CU-qJi">
+            <objects>
+                <viewController id="J7E-e9-4Q6" customClass="JourneyViewController" customModule="fs2014" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rhx-XN-17y"/>
+                        <viewControllerLayoutGuide type="bottom" id="LgG-dZ-C5J"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QHC-K0-XKx">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ggt-Z0-PGj" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ggt-Z0-PGj" firstAttribute="leading" secondItem="QHC-K0-XKx" secondAttribute="leadingMargin" id="NGQ-rL-CnB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ggt-Z0-PGj" secondAttribute="trailing" id="Qcp-OE-Kky"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="ggt-Z0-PGj" id="vds-p4-9Fh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nkn-X7-5wr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="825" y="-466"/>
         </scene>
         <!--Title-->
         <scene sceneID="Wtc-eX-QCL">
@@ -350,8 +386,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="k9O-Jc-6Rg"/>
-        <segue reference="fLi-5S-82o"/>
+        <segue reference="xLW-gX-WLs"/>
         <segue reference="qZR-mw-W0G"/>
+        <segue reference="fLi-5S-82o"/>
     </inferredMetricsTieBreakers>
 </document>
