@@ -155,7 +155,7 @@
                                         <barButtonItem key="rightBarButtonItem" title="Settings" id="peb-Vn-H2S">
                                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
-                                                <segue destination="AeU-nd-kS4" kind="show" id="fLi-5S-82o"/>
+                                                <segue destination="iC0-hO-iRS" kind="show" id="2UF-co-xmv"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -210,7 +210,7 @@
                                         <barButtonItem key="rightBarButtonItem" title="Settings" id="E5n-gb-a29">
                                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
-                                                <segue destination="AeU-nd-kS4" kind="show" id="6sk-LV-CyX"/>
+                                                <segue destination="iC0-hO-iRS" kind="show" id="1UC-NS-cQ1"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -264,7 +264,7 @@
                                         <barButtonItem key="rightBarButtonItem" title="Settings" id="1w0-9D-dDJ">
                                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
-                                                <segue destination="AeU-nd-kS4" kind="show" id="aFy-NY-vQr"/>
+                                                <segue destination="iC0-hO-iRS" kind="show" id="eaM-xd-eTG"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -521,57 +521,71 @@
             </objects>
             <point key="canvasLocation" x="1838" y="-1950"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="tSb-mS-512">
+        <!--Settings-->
+        <scene sceneID="mtO-yD-fqc">
             <objects>
-                <viewController id="AeU-nd-kS4" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="uad-Ii-zsK"/>
-                        <viewControllerLayoutGuide type="bottom" id="e0y-aI-QNq"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="EgM-Nf-EMG">
+                <tableViewController id="6TC-aR-mSZ" customClass="SettingsTableViewController" customModule="fs2014" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="oDd-2k-nak">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iyd-8x-Hso">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="cdC-xS-Mnu"/>
-                                </constraints>
-                                <items>
-                                    <navigationItem title="Settings" id="TMc-s9-uqY">
-                                        <barButtonItem key="rightBarButtonItem" title="Done" id="Tqb-5Z-Lxc">
-                                            <connections>
-                                                <segue destination="ofY-lF-dVm" kind="show" id="k9O-Jc-6Rg"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="Iyd-8x-Hso" firstAttribute="leading" secondItem="EgM-Nf-EMG" secondAttribute="leading" id="BN8-fg-1qf"/>
-                            <constraint firstItem="Iyd-8x-Hso" firstAttribute="leading" secondItem="EgM-Nf-EMG" secondAttribute="leading" id="K2U-dX-6ZF"/>
-                            <constraint firstAttribute="centerX" secondItem="Iyd-8x-Hso" secondAttribute="centerX" id="SLW-3t-bYY"/>
-                            <constraint firstItem="e0y-aI-QNq" firstAttribute="top" secondItem="Iyd-8x-Hso" secondAttribute="bottom" constant="491" id="VIk-2L-NdM"/>
-                            <constraint firstItem="Iyd-8x-Hso" firstAttribute="top" secondItem="EgM-Nf-EMG" secondAttribute="top" id="WaR-ac-TwU"/>
-                            <constraint firstItem="e0y-aI-QNq" firstAttribute="top" secondItem="Iyd-8x-Hso" secondAttribute="bottom" constant="540" id="npc-SH-kNA"/>
-                            <constraint firstAttribute="trailing" secondItem="Iyd-8x-Hso" secondAttribute="trailing" id="vta-4R-Htr"/>
-                        </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="BN8-fg-1qf"/>
-                                <exclude reference="vta-4R-Htr"/>
-                                <exclude reference="VIk-2L-NdM"/>
-                                <exclude reference="npc-SH-kNA"/>
-                            </mask>
-                        </variation>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="noV-he-285" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="titleCell" id="NXN-T6-77i">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NXN-T6-77i" id="VQk-R4-q6A">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" red="0.90196078430000004" green="0.90588235289999997" blue="0.90980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="settingsCell" textLabel="8PS-l0-tAP" style="IBUITableViewCellStyleDefault" id="453-cw-6xD">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="453-cw-6xD" id="RpL-Sf-RPs">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8PS-l0-tAP">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="6TC-aR-mSZ" id="7Ns-lF-l6b"/>
+                            <outlet property="delegate" destination="6TC-aR-mSZ" id="4nG-n0-lpP"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Settings" id="e4W-xY-vRY">
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="ukB-qi-aLa">
+                            <connections>
+                                <segue destination="imb-g1-hqO" kind="unwind" unwindAction="unwindToSegue:" id="boc-kc-RrZ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TqN-Sv-jiC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="imb-g1-hqO" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2577" y="-456"/>
+            <point key="canvasLocation" x="3340" y="-456"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="t9P-K6-TBw">
+            <objects>
+                <navigationController id="iC0-hO-iRS" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="sBq-tp-oi1">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="6TC-aR-mSZ" kind="relationship" relationship="rootViewController" id="G2V-9W-yjR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bAC-QR-Q5t" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2590" y="-456"/>
         </scene>
     </scenes>
     <resources>
@@ -582,8 +596,7 @@
         <image name="twitter_color_22x22" width="22" height="22"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="eaM-xd-eTG"/>
         <segue reference="z8k-82-Emt"/>
-        <segue reference="xLW-gX-WLs"/>
-        <segue reference="aFy-NY-vQr"/>
     </inferredMetricsTieBreakers>
 </document>
