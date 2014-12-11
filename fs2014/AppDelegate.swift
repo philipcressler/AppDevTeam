@@ -13,7 +13,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     var healthStore:HealthKitHandler = HealthKitHandler()
-
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         //enable local notifications
         let settings = UIUserNotificationSettings(forTypes: UIUserNotificationType.Alert, categories: nil)

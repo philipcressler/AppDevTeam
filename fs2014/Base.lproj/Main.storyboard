@@ -169,7 +169,7 @@
                             <constraint firstItem="gwY-uB-vTN" firstAttribute="top" secondItem="TRL-Wj-bKI" secondAttribute="bottom" constant="-20" id="yfs-3M-j7U"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" tag="1" title="Dashboard" image="Dashboard-Icon-Gray-22px" selectedImage="Dashboard-Icon-Gray-22px" id="qbP-E8-pVf">
+                    <tabBarItem key="tabBarItem" tag="1" title="Dashboard" image="Dashboard-Icon-Gray-22px" selectedImage="Dashboard-Icon-Color-22px" id="qbP-E8-pVf">
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="image" keyPath="selectedImage" value="Dashboard-Icon-Color-22px"/>
                         </userDefinedRuntimeAttributes>
@@ -375,7 +375,7 @@
         <image name="route66-stamp" width="1024" height="1024"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="UzY-z3-kWE"/>
-        <segue reference="6sk-LV-CyX"/>
+        <segue reference="qZR-mw-W0G"/>
+        <segue reference="fLi-5S-82o"/>
     </inferredMetricsTieBreakers>
 </document>
