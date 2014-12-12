@@ -44,11 +44,11 @@ class HistoryDetailsViewController: UIViewController {
     }
     
     @IBAction func savePhoto() {
-        let imageToSave = journeyImage?.CGImage
+        let imageToSave = journeyImage.CGImage
         let library = ALAssetsLibrary()
-        var orientation:ALAssetOrientation = ALAssetOrientation(rawValue: UIImage().imageOrientation.rawValue)!
+      //  var orientation:ALAssetOrientation = ALAssetOrientation(rawValue: UIImage().imageOrientation.rawValue)!
         
-        library.writeImageToSavedPhotosAlbum(imageToSave, orientation: orientation, completionBlock:nil)
+       // library.writeImageToSavedPhotosAlbum(imageToSave, orientation: orientation, completionBlock:nil)
     }
     
     /*

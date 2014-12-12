@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		35A4378F1A3A617F006A1511 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A4378C1A3A617F006A1511 /* AppDelegate.swift */; };
-		35A437901A3A617F006A1511 /* Journey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A4378D1A3A617F006A1511 /* Journey.swift */; };
-		35A437911A3A617F006A1511 /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A4378E1A3A617F006A1511 /* PickerViewController.swift */; };
+		3504118A1A3A6F2800AF5F8C /* Journey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350411881A3A6EBC00AF5F8C /* Journey.swift */; };
+		3504118C1A3A6F6A00AF5F8C /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3504118B1A3A6F6A00AF5F8C /* PickerViewController.swift */; };
+		3504118D1A3A70D300AF5F8C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A4378C1A3A617F006A1511 /* AppDelegate.swift */; };
+		3504118F1A3A716100AF5F8C /* HealthKitHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3504118E1A3A716100AF5F8C /* HealthKitHandler.swift */; };
 		35D0FE5F19F6DD260094AE75 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35D0FE5D19F6DD260094AE75 /* Main.storyboard */; };
 		35D0FE6119F6DD260094AE75 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35D0FE6019F6DD260094AE75 /* Images.xcassets */; };
 		35D0FE6419F6DD260094AE75 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35D0FE6219F6DD260094AE75 /* LaunchScreen.xib */; };
@@ -21,7 +22,6 @@
 		388D6A8C1A16D6340017CC59 /* StreetViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388D6A8B1A16D6340017CC59 /* StreetViewViewController.swift */; };
 		388D6A8E1A16D6500017CC59 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388D6A8D1A16D6500017CC59 /* HistoryViewController.swift */; };
 		38F019241A30D16C0024416C /* HistoryDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F019231A30D16C0024416C /* HistoryDetailsViewController.swift */; };
-		38F138BE1A156A7A004C128A /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F138BD1A156A7A004C128A /* PickerViewController.swift */; };
 		38F138C01A15A8F5004C128A /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F138BF1A15A8F5004C128A /* DashboardViewController.swift */; };
 		6B29D8E61A2E42AA0001F343 /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6B29D8E51A2E42AA0001F343 /* GoogleMaps.bundle */; };
 		6B29D9011A2E43A30001F343 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B29D8FD1A2E434A0001F343 /* SystemConfiguration.framework */; };
@@ -52,9 +52,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		350411881A3A6EBC00AF5F8C /* Journey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Journey.swift; sourceTree = "<group>"; };
+		3504118B1A3A6F6A00AF5F8C /* PickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
+		3504118E1A3A716100AF5F8C /* HealthKitHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthKitHandler.swift; sourceTree = "<group>"; };
 		35A4378C1A3A617F006A1511 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		35A4378D1A3A617F006A1511 /* Journey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Journey.swift; sourceTree = "<group>"; };
-		35A4378E1A3A617F006A1511 /* PickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
 		35D0FE5419F6DD260094AE75 /* fs2014.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fs2014.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35D0FE5819F6DD260094AE75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		35D0FE5E19F6DD260094AE75 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -72,7 +73,6 @@
 		388D6A8B1A16D6340017CC59 /* StreetViewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreetViewViewController.swift; sourceTree = "<group>"; };
 		388D6A8D1A16D6500017CC59 /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		38F019231A30D16C0024416C /* HistoryDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryDetailsViewController.swift; sourceTree = "<group>"; };
-		38F138BD1A156A7A004C128A /* PickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
 		38F138BF1A15A8F5004C128A /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		6B29D8E31A2E42790001F343 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMaps.framework; sourceTree = "<group>"; };
 		6B29D8E51A2E42AA0001F343 /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
@@ -147,19 +147,15 @@
 		35D0FE5619F6DD260094AE75 /* fs2014 */ = {
 			isa = PBXGroup;
 			children = (
+				3504118E1A3A716100AF5F8C /* HealthKitHandler.swift */,
+				3504118B1A3A6F6A00AF5F8C /* PickerViewController.swift */,
+				350411881A3A6EBC00AF5F8C /* Journey.swift */,
 				35A4378C1A3A617F006A1511 /* AppDelegate.swift */,
-				35A4378D1A3A617F006A1511 /* Journey.swift */,
-				35A4378E1A3A617F006A1511 /* PickerViewController.swift */,
-				35DF57C61A2FD46D005A7D40 /* HealthKitHandler.swift */,
 				38F138BF1A15A8F5004C128A /* DashboardViewController.swift */,
 				388D6A8B1A16D6340017CC59 /* StreetViewViewController.swift */,
 				388D6A8D1A16D6500017CC59 /* HistoryViewController.swift */,
 				3869C3A31A2FD58A004A1661 /* HistoryCellView.swift */,
 				38F019231A30D16C0024416C /* HistoryDetailsViewController.swift */,
-				35D0FE5B19F6DD260094AE75 /* ViewController.swift */,
-				350308E119F9761100A35D60 /* HealthKitHandler.swift */,
-				3565435D19FED9E700243FC6 /* Journey.swift */,
-				3565435F19FEDBE200243FC6 /* JourneyHandler.swift */,
 				3863EC571A375036009DA393 /* SettingsTableViewController.swift */,
 				35D0FE5D19F6DD260094AE75 /* Main.storyboard */,
 				35D0FE7919F6DD3D0094AE75 /* fs2014.entitlements */,
@@ -329,14 +325,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38F138BE1A156A7A004C128A /* PickerViewController.swift in Sources */,
+				3504118D1A3A70D300AF5F8C /* AppDelegate.swift in Sources */,
+				3504118A1A3A6F2800AF5F8C /* Journey.swift in Sources */,
 				3869C3A41A2FD58A004A1661 /* HistoryCellView.swift in Sources */,
+				3504118C1A3A6F6A00AF5F8C /* PickerViewController.swift in Sources */,
 				38F138C01A15A8F5004C128A /* DashboardViewController.swift in Sources */,
 				38F019241A30D16C0024416C /* HistoryDetailsViewController.swift in Sources */,
 				388D6A8C1A16D6340017CC59 /* StreetViewViewController.swift in Sources */,
-				3565435E19FED9E700243FC6 /* Journey.swift in Sources */,
-				350308E219F9761100A35D60 /* HealthKitHandler.swift in Sources */,
-				35D0FE5C19F6DD260094AE75 /* ViewController.swift in Sources */,
+				3504118F1A3A716100AF5F8C /* HealthKitHandler.swift in Sources */,
 				3863EC581A375036009DA393 /* SettingsTableViewController.swift in Sources */,
 				388D6A8E1A16D6500017CC59 /* HistoryViewController.swift in Sources */,
 			);
