@@ -15,6 +15,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var healthStore:HealthKitHandler = HealthKitHandler()
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        
+        //************* Notifications and background Fetch setup ****************
+    
         //enable local notifications
         let settings = UIUserNotificationSettings(forTypes: UIUserNotificationType.Alert, categories: nil)
         UIApplication.sharedApplication().registerUserNotificationSettings(settings)
@@ -23,6 +26,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //setup healthstore
         healthStore = HealthKitHandler()
         healthStore.setupHealthStoreIfPossible()
+        
+        //************ Check if Journey is selected ************//
+        if let userData = NSUserDefaults.standardUserDefaults().objectForKey("data") as? NSData {
+            return true
+        }else{
+            self.window = UIWindow(frame:UIScreen.mainScreen().bounds)
+            var storyboard = UIStoryboard(name: "Main", bundle: nil)
+            var initialViewController = storyboard.instantiateViewControllerWithIdentifier("pickerView") as UIViewController
+            self.window?.rootViewController = initialViewController
+            self.window?.makeKeyAndVisible()
+            var defaults:NSUserDefaults = NSUserDefaults.standardUserDefaults()
+            
+            defaults.setObject(false, forKey: "weeklyNotifications")
+            defaults.setObject("Miles", forKey: "units")
+            defaults.setObject(true, forKey: "landmarkNotifications")
+            
+            defaults.synchronize()
+        }
         
         return true
     }
