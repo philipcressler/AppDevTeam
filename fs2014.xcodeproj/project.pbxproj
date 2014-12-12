@@ -14,9 +14,14 @@
 		35D0FE6119F6DD260094AE75 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35D0FE6019F6DD260094AE75 /* Images.xcassets */; };
 		35D0FE6419F6DD260094AE75 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35D0FE6219F6DD260094AE75 /* LaunchScreen.xib */; };
 		35D0FE7019F6DD260094AE75 /* fs2014Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D0FE6F19F6DD260094AE75 /* fs2014Tests.swift */; };
-		35DF57C81A2FD46D005A7D40 /* HealthKitHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DF57C61A2FD46D005A7D40 /* HealthKitHandler.swift */; };
+		3863EC581A375036009DA393 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3863EC571A375036009DA393 /* SettingsTableViewController.swift */; };
+		3869C3A41A2FD58A004A1661 /* HistoryCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3869C3A31A2FD58A004A1661 /* HistoryCellView.swift */; };
+		386E163C1A32353B00BCF24A /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 386E163B1A32353B00BCF24A /* Social.framework */; };
+		386E163E1A3239AB00BCF24A /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 386E163D1A3239AB00BCF24A /* AssetsLibrary.framework */; };
 		388D6A8C1A16D6340017CC59 /* StreetViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388D6A8B1A16D6340017CC59 /* StreetViewViewController.swift */; };
 		388D6A8E1A16D6500017CC59 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388D6A8D1A16D6500017CC59 /* HistoryViewController.swift */; };
+		38F019241A30D16C0024416C /* HistoryDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F019231A30D16C0024416C /* HistoryDetailsViewController.swift */; };
+		38F138BE1A156A7A004C128A /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F138BD1A156A7A004C128A /* PickerViewController.swift */; };
 		38F138C01A15A8F5004C128A /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F138BF1A15A8F5004C128A /* DashboardViewController.swift */; };
 		6B29D8E61A2E42AA0001F343 /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6B29D8E51A2E42AA0001F343 /* GoogleMaps.bundle */; };
 		6B29D9011A2E43A30001F343 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B29D8FD1A2E434A0001F343 /* SystemConfiguration.framework */; };
@@ -60,9 +65,14 @@
 		35D0FE6F19F6DD260094AE75 /* fs2014Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fs2014Tests.swift; sourceTree = "<group>"; };
 		35D0FE7919F6DD3D0094AE75 /* fs2014.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = fs2014.entitlements; sourceTree = "<group>"; };
 		35D0FE7A19F6DD3D0094AE75 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
-		35DF57C61A2FD46D005A7D40 /* HealthKitHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthKitHandler.swift; sourceTree = "<group>"; };
+		3863EC571A375036009DA393 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		3869C3A31A2FD58A004A1661 /* HistoryCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryCellView.swift; sourceTree = "<group>"; };
+		386E163B1A32353B00BCF24A /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		386E163D1A3239AB00BCF24A /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		388D6A8B1A16D6340017CC59 /* StreetViewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreetViewViewController.swift; sourceTree = "<group>"; };
 		388D6A8D1A16D6500017CC59 /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		38F019231A30D16C0024416C /* HistoryDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryDetailsViewController.swift; sourceTree = "<group>"; };
+		38F138BD1A156A7A004C128A /* PickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
 		38F138BF1A15A8F5004C128A /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		6B29D8E31A2E42790001F343 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMaps.framework; sourceTree = "<group>"; };
 		6B29D8E51A2E42AA0001F343 /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
@@ -85,6 +95,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				386E163E1A3239AB00BCF24A /* AssetsLibrary.framework in Frameworks */,
+				386E163C1A32353B00BCF24A /* Social.framework in Frameworks */,
 				6B29D9011A2E43A30001F343 /* SystemConfiguration.framework in Frameworks */,
 				6B29D9021A2E43A30001F343 /* QuartzCore.framework in Frameworks */,
 				6B29D9031A2E43A30001F343 /* OpenGLES.framework in Frameworks */,
@@ -142,6 +154,13 @@
 				38F138BF1A15A8F5004C128A /* DashboardViewController.swift */,
 				388D6A8B1A16D6340017CC59 /* StreetViewViewController.swift */,
 				388D6A8D1A16D6500017CC59 /* HistoryViewController.swift */,
+				3869C3A31A2FD58A004A1661 /* HistoryCellView.swift */,
+				38F019231A30D16C0024416C /* HistoryDetailsViewController.swift */,
+				35D0FE5B19F6DD260094AE75 /* ViewController.swift */,
+				350308E119F9761100A35D60 /* HealthKitHandler.swift */,
+				3565435D19FED9E700243FC6 /* Journey.swift */,
+				3565435F19FEDBE200243FC6 /* JourneyHandler.swift */,
+				3863EC571A375036009DA393 /* SettingsTableViewController.swift */,
 				35D0FE5D19F6DD260094AE75 /* Main.storyboard */,
 				35D0FE7919F6DD3D0094AE75 /* fs2014.entitlements */,
 				35D0FE6019F6DD260094AE75 /* Images.xcassets */,
@@ -179,6 +198,8 @@
 		6B29D8FF1A2E436D0001F343 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				386E163D1A3239AB00BCF24A /* AssetsLibrary.framework */,
+				386E163B1A32353B00BCF24A /* Social.framework */,
 				6B29D8FD1A2E434A0001F343 /* SystemConfiguration.framework */,
 				6B29D8FB1A2E433F0001F343 /* QuartzCore.framework */,
 				6B29D8F91A2E43310001F343 /* OpenGLES.framework */,
@@ -308,12 +329,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				35A437901A3A617F006A1511 /* Journey.swift in Sources */,
+				38F138BE1A156A7A004C128A /* PickerViewController.swift in Sources */,
+				3869C3A41A2FD58A004A1661 /* HistoryCellView.swift in Sources */,
 				38F138C01A15A8F5004C128A /* DashboardViewController.swift in Sources */,
+				38F019241A30D16C0024416C /* HistoryDetailsViewController.swift in Sources */,
 				388D6A8C1A16D6340017CC59 /* StreetViewViewController.swift in Sources */,
-				35DF57C81A2FD46D005A7D40 /* HealthKitHandler.swift in Sources */,
-				35A4378F1A3A617F006A1511 /* AppDelegate.swift in Sources */,
-				35A437911A3A617F006A1511 /* PickerViewController.swift in Sources */,
+				3565435E19FED9E700243FC6 /* Journey.swift in Sources */,
+				350308E219F9761100A35D60 /* HealthKitHandler.swift in Sources */,
+				35D0FE5C19F6DD260094AE75 /* ViewController.swift in Sources */,
+				3863EC581A375036009DA393 /* SettingsTableViewController.swift in Sources */,
 				388D6A8E1A16D6500017CC59 /* HistoryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
