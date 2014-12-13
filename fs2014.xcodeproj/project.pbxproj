@@ -21,9 +21,12 @@
 		386E163E1A3239AB00BCF24A /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 386E163D1A3239AB00BCF24A /* AssetsLibrary.framework */; };
 		388D6A8C1A16D6340017CC59 /* StreetViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388D6A8B1A16D6340017CC59 /* StreetViewViewController.swift */; };
 		388D6A8E1A16D6500017CC59 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388D6A8D1A16D6500017CC59 /* HistoryViewController.swift */; };
+		38B5FF121A3A968500E9989C /* history.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 38B5FF111A3A968500E9989C /* history.sqlite */; };
 		38F019241A30D16C0024416C /* HistoryDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F019231A30D16C0024416C /* HistoryDetailsViewController.swift */; };
 		38F138BE1A156A7A004C128A /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F138BD1A156A7A004C128A /* PickerViewController.swift */; };
 		38F138C01A15A8F5004C128A /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F138BF1A15A8F5004C128A /* DashboardViewController.swift */; };
+		38FC6E111A3B7A9500C72572 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FC6E101A3B7A9500C72572 /* History.swift */; };
+		38FC6E191A3B8EAC00C72572 /* history.txt in Resources */ = {isa = PBXBuildFile; fileRef = 38FC6E181A3B8EAC00C72572 /* history.txt */; };
 		6B29D8E61A2E42AA0001F343 /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6B29D8E51A2E42AA0001F343 /* GoogleMaps.bundle */; };
 		6B29D9011A2E43A30001F343 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B29D8FD1A2E434A0001F343 /* SystemConfiguration.framework */; };
 		6B29D9021A2E43A30001F343 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B29D8FB1A2E433F0001F343 /* QuartzCore.framework */; };
@@ -73,9 +76,13 @@
 		386E163D1A3239AB00BCF24A /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		388D6A8B1A16D6340017CC59 /* StreetViewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreetViewViewController.swift; sourceTree = "<group>"; };
 		388D6A8D1A16D6500017CC59 /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		38B5FE8B1A3A8B9700E9989C /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		38B5FF111A3A968500E9989C /* history.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = history.sqlite; path = ../../../../Desktop/history.sqlite; sourceTree = "<group>"; };
 		38F019231A30D16C0024416C /* HistoryDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryDetailsViewController.swift; sourceTree = "<group>"; };
 		38F138BD1A156A7A004C128A /* PickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
 		38F138BF1A15A8F5004C128A /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		38FC6E101A3B7A9500C72572 /* History.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
+		38FC6E181A3B8EAC00C72572 /* history.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = history.txt; sourceTree = "<group>"; };
 		6B29D8E31A2E42790001F343 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMaps.framework; sourceTree = "<group>"; };
 		6B29D8E51A2E42AA0001F343 /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
 		6B29D8E71A2E42D70001F343 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -156,6 +163,8 @@
 				388D6A8D1A16D6500017CC59 /* HistoryViewController.swift */,
 				3869C3A31A2FD58A004A1661 /* HistoryCellView.swift */,
 				38F019231A30D16C0024416C /* HistoryDetailsViewController.swift */,
+				38FC6E181A3B8EAC00C72572 /* history.txt */,
+				38FC6E101A3B7A9500C72572 /* History.swift */,
 				35D0FE5B19F6DD260094AE75 /* ViewController.swift */,
 				350308E119F9761100A35D60 /* HealthKitHandler.swift */,
 				3565435D19FED9E700243FC6 /* Journey.swift */,
@@ -164,6 +173,7 @@
 				35D0FE7919F6DD3D0094AE75 /* fs2014.entitlements */,
 				35D0FE6019F6DD260094AE75 /* Images.xcassets */,
 				35D0FE6219F6DD260094AE75 /* LaunchScreen.xib */,
+				38B5FF111A3A968500E9989C /* history.sqlite */,
 				35D0FE5719F6DD260094AE75 /* Supporting Files */,
 			);
 			path = fs2014;
@@ -197,6 +207,7 @@
 		6B29D8FF1A2E436D0001F343 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				38B5FE8B1A3A8B9700E9989C /* libsqlite3.dylib */,
 				386E163D1A3239AB00BCF24A /* AssetsLibrary.framework */,
 				386E163B1A32353B00BCF24A /* Social.framework */,
 				6B29D8FD1A2E434A0001F343 /* SystemConfiguration.framework */,
@@ -305,7 +316,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				35D0FE5F19F6DD260094AE75 /* Main.storyboard in Resources */,
+				38B5FF121A3A968500E9989C /* history.sqlite in Resources */,
 				35D0FE6419F6DD260094AE75 /* LaunchScreen.xib in Resources */,
+				38FC6E191A3B8EAC00C72572 /* history.txt in Resources */,
 				35D0FE6119F6DD260094AE75 /* Images.xcassets in Resources */,
 				6B29D8E61A2E42AA0001F343 /* GoogleMaps.bundle in Resources */,
 			);
@@ -331,6 +344,7 @@
 				38F019241A30D16C0024416C /* HistoryDetailsViewController.swift in Sources */,
 				388D6A8C1A16D6340017CC59 /* StreetViewViewController.swift in Sources */,
 				3565435E19FED9E700243FC6 /* Journey.swift in Sources */,
+				38FC6E111A3B7A9500C72572 /* History.swift in Sources */,
 				350308E219F9761100A35D60 /* HealthKitHandler.swift in Sources */,
 				35D0FE5C19F6DD260094AE75 /* ViewController.swift in Sources */,
 				388D6A8E1A16D6500017CC59 /* HistoryViewController.swift in Sources */,
@@ -458,6 +472,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = fs2014/fs2014.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -469,6 +484,9 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_INCLUDE_PATHS = "$(PROJECT_DIR)/Externals/Squeal/modules";
+				SWIFT_OBJC_BRIDGING_HEADER = "fs2014/fs2014-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -476,6 +494,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = fs2014/fs2014.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -487,6 +506,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_INCLUDE_PATHS = "$(PROJECT_DIR)/Externals/Squeal/modules";
+				SWIFT_OBJC_BRIDGING_HEADER = "fs2014/fs2014-Bridging-Header.h";
 			};
 			name = Release;
 		};

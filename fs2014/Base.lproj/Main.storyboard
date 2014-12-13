@@ -298,7 +298,7 @@
                                         </view>
                                         <connections>
                                             <outlet property="stamp" destination="Rtc-bS-S5t" id="pcv-Ko-gpB"/>
-                                            <segue destination="ZcP-Wu-kLp" kind="show" id="qeN-FA-6Q2"/>
+                                            <segue destination="ZcP-Wu-kLp" kind="show" identifier="toDetails" id="qeN-FA-6Q2"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -390,6 +390,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="share:" destination="ZcP-Wu-kLp" eventType="touchUpInside" id="V6b-BG-VBB"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Mj-Ab-bZ7">
                                 <rect key="frame" x="0.0" y="458" width="299" height="44"/>

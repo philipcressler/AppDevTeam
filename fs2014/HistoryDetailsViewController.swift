@@ -13,13 +13,12 @@ import AssetsLibrary
 class HistoryDetailsViewController: UIViewController {
 
     @IBOutlet weak var journey: UIImageView!
-    var journeyImage = UIImage(named: "Cali_Postcard.pdf")
+    var postcard:String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
-        journey.image = journeyImage
+        journey.image = UIImage(named: postcard)
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,7 +30,7 @@ class HistoryDetailsViewController: UIViewController {
         var shareOnFacebook : SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
         
         shareOnFacebook.setInitialText("I completed a journey with journey+! ")
-        shareOnFacebook.addImage(journeyImage)
+        shareOnFacebook.addImage(journey.image)
         self.presentViewController(shareOnFacebook, animated: true, completion: nil)
     }
     
@@ -39,16 +38,20 @@ class HistoryDetailsViewController: UIViewController {
         var shareOnTwitter : SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
         
         shareOnTwitter.setInitialText("I completed a journey with journey+! ")
-        shareOnTwitter.addImage(journeyImage)
+        shareOnTwitter.addImage(journey.image)
         self.presentViewController(shareOnTwitter, animated: true, completion: nil)
     }
     
     @IBAction func savePhoto() {
-        let imageToSave = journeyImage?.CGImage
+        let imageToSave = journey.image?.CGImage
         let library = ALAssetsLibrary()
         var orientation:ALAssetOrientation = ALAssetOrientation(rawValue: UIImage().imageOrientation.rawValue)!
         
         library.writeImageToSavedPhotosAlbum(imageToSave, orientation: orientation, completionBlock:nil)
+    }
+    
+    @IBAction func share(sender: AnyObject) {
+        
     }
     
     /*
