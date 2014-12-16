@@ -9,8 +9,5 @@
 import UIKit
 
 class HistoryCellView: UICollectionViewCell {
-  
     @IBOutlet weak var stamp: UIImageView!
-    
-    
 }

@@ -8,20 +8,82 @@
 
 import UIKit
 
-class SettingsTableViewController: UITableViewController {
+class SettingsTableViewController: UITableViewController, UIActionSheetDelegate{
 
-    let cellIdentifier = "settingsCell"
-    var settingItems = ["Units", "Weekly", "By Landmark", "Reset Steps to Zero"]
-    var titleItems = ["General", "Notifications", "Reset"]
+    var defaults: NSUserDefaults = NSUserDefaults.standardUserDefaults()
+    var userJourney:Journey?
+    
+    @IBOutlet weak var weeklySwitch: UISwitch!
+    @IBOutlet weak var landmarkSwitch: UISwitch!
+    
+    @IBOutlet weak var distanceSegment: UISegmentedControl!
+    
+    @IBAction func weeklyNotifications(sender:AnyObject){
+        if(weeklySwitch.on)
+        {
+            defaults.setObject(true, forKey: "weeklyNotifications")
+        }
+        else
+        {
+            defaults.setObject(false, forKey: "weeklyNotifications")
+        }
+        defaults.synchronize()
+    }
+    
+    @IBAction func landmarkNotifications(sender: AnyObject) {
+        if(landmarkSwitch.on)
+        {
+            defaults.setObject(true, forKey: "landmarkNotifications")
+        }
+        else{
+            defaults.setObject(false, forKey: "landmarkNotifications")
+        }
+        defaults.synchronize()
+    }
+    
+    @IBAction func reset(sender: AnyObject) {
+        let actionSheet = UIActionSheet(title: nil, delegate: self, cancelButtonTitle: nil, destructiveButtonTitle: "Yes, reset steps to zero", otherButtonTitles: "Cancel")
+        actionSheet.actionSheetStyle = .Default
+        actionSheet.showInView(self.view)
+        
+    }
+    
+    @IBAction func changeMetric(sender: AnyObject) {
+        switch sender.selectedSegmentIndex{
+        case 0:
+                defaults.setObject("Imperial", forKey: "units")
+        case 1:
+                defaults.setObject("Metric", forKey: "units")
+        default:
+            break;
+        }
+        
+        defaults.synchronize()
+
+        
+    }
+    
+    
+    
+    func actionSheet(actionSheet: UIActionSheet, clickedButtonAtIndex buttonIndex: Int )
+    {
+        println("\(buttonIndex)")
+        if(buttonIndex == 0)
+        {
+            userJourney?.resetSteps()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        userJourney = Journey().load()
+        if(defaults.objectForKey("units") as String == "Imperial")
+        {
+            distanceSegment.selectedSegmentIndex = 0
+        }else{
+            distanceSegment.selectedSegmentIndex = 1
+        }
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,82 +91,4 @@ class SettingsTableViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    // MARK: - Table view data source
-
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Potentially incomplete method implementation.
-        // Return the number of sections.
-        return 1
-    }
-
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete method implementation.
-        // Return the number of rows in the section.
-        return settingItems.count
-    }
-    
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        
-        var cell = tableView.dequeueReusableCellWithIdentifier("settingsCell") as UITableViewCell
-        
-        cell.textLabel?.text = settingItems[indexPath.row]
-        
-        return cell
-    }
-    
-    /*
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as UITableViewCell
-
-        // Configure the cell...
-
-        return cell
-    }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return NO if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return NO if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-}
+ }

@@ -7,23 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3504118A1A3A6F2800AF5F8C /* Journey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350411881A3A6EBC00AF5F8C /* Journey.swift */; };
-		3504118C1A3A6F6A00AF5F8C /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3504118B1A3A6F6A00AF5F8C /* PickerViewController.swift */; };
 		3504118D1A3A70D300AF5F8C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A4378C1A3A617F006A1511 /* AppDelegate.swift */; };
 		3504118F1A3A716100AF5F8C /* HealthKitHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3504118E1A3A716100AF5F8C /* HealthKitHandler.swift */; };
+		356BD60C1A3BD0BD004DE344 /* DBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 356BD6091A3BD0BD004DE344 /* DBManager.m */; };
+		356BD60F1A3BD0E0004DE344 /* JourneyDatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356BD60E1A3BD0E0004DE344 /* JourneyDatabaseManager.swift */; };
+		356BD6121A3BD165004DE344 /* Journey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356BD6111A3BD165004DE344 /* Journey.swift */; };
+		356BD6141A3BD180004DE344 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356BD6131A3BD180004DE344 /* DashboardViewController.swift */; };
+		356BD6161A3BD191004DE344 /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356BD6151A3BD191004DE344 /* PickerViewController.swift */; };
+		356BD6181A3BD61F004DE344 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 356BD6171A3BD61F004DE344 /* libsqlite3.dylib */; };
+		356BD61B1A3BE46B004DE344 /* journies.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 356BD61A1A3BE46B004DE344 /* journies.sqlite */; };
+		357956FD1A3D003000E6CD11 /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 357956FC1A3D003000E6CD11 /* GoogleMaps.framework */; };
+		357956FF1A3D006B00E6CD11 /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 357956FE1A3D006B00E6CD11 /* GoogleMaps.bundle */; };
+		359940761A3DF73B00BF6741 /* StreetViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359940751A3DF73B00BF6741 /* StreetViewViewController.swift */; };
+		3599407C1A3E1F2D00BF6741 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359940791A3E1F2D00BF6741 /* History.swift */; };
+		359940801A3E1F8100BF6741 /* HistoryDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3599407F1A3E1F8100BF6741 /* HistoryDetailsViewController.swift */; };
+		359940821A3E224900BF6741 /* HistoryCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359940811A3E224900BF6741 /* HistoryCellView.swift */; };
+		359940841A3E24F700BF6741 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359940831A3E24F700BF6741 /* HistoryViewController.swift */; };
 		35D0FE5F19F6DD260094AE75 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35D0FE5D19F6DD260094AE75 /* Main.storyboard */; };
 		35D0FE6119F6DD260094AE75 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35D0FE6019F6DD260094AE75 /* Images.xcassets */; };
-		35D0FE6419F6DD260094AE75 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35D0FE6219F6DD260094AE75 /* LaunchScreen.xib */; };
 		35D0FE7019F6DD260094AE75 /* fs2014Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D0FE6F19F6DD260094AE75 /* fs2014Tests.swift */; };
 		3863EC581A375036009DA393 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3863EC571A375036009DA393 /* SettingsTableViewController.swift */; };
-		3869C3A41A2FD58A004A1661 /* HistoryCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3869C3A31A2FD58A004A1661 /* HistoryCellView.swift */; };
 		386E163C1A32353B00BCF24A /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 386E163B1A32353B00BCF24A /* Social.framework */; };
 		386E163E1A3239AB00BCF24A /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 386E163D1A3239AB00BCF24A /* AssetsLibrary.framework */; };
-		388D6A8C1A16D6340017CC59 /* StreetViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388D6A8B1A16D6340017CC59 /* StreetViewViewController.swift */; };
-		388D6A8E1A16D6500017CC59 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388D6A8D1A16D6500017CC59 /* HistoryViewController.swift */; };
-		38F019241A30D16C0024416C /* HistoryDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F019231A30D16C0024416C /* HistoryDetailsViewController.swift */; };
-		38F138C01A15A8F5004C128A /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F138BF1A15A8F5004C128A /* DashboardViewController.swift */; };
-		6B29D8E61A2E42AA0001F343 /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6B29D8E51A2E42AA0001F343 /* GoogleMaps.bundle */; };
 		6B29D9011A2E43A30001F343 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B29D8FD1A2E434A0001F343 /* SystemConfiguration.framework */; };
 		6B29D9021A2E43A30001F343 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B29D8FB1A2E433F0001F343 /* QuartzCore.framework */; };
 		6B29D9031A2E43A30001F343 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B29D8F91A2E43310001F343 /* OpenGLES.framework */; };
@@ -36,9 +41,8 @@
 		6B29D90A1A2E43A30001F343 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B29D8EB1A2E42EC0001F343 /* CoreLocation.framework */; };
 		6B29D90B1A2E43A30001F343 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B29D8E91A2E42E10001F343 /* CoreData.framework */; };
 		6B29D90C1A2E43A30001F343 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B29D8E71A2E42D70001F343 /* AVFoundation.framework */; };
-		6B29D90D1A2E43A30001F343 /* GoogleMaps.bundle in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B29D8E51A2E42AA0001F343 /* GoogleMaps.bundle */; };
-		6B29D90E1A2E43A30001F343 /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B29D8E31A2E42790001F343 /* GoogleMaps.framework */; };
 		6B29D90F1A2E43A30001F343 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35D0FE7A19F6DD3D0094AE75 /* HealthKit.framework */; };
+		6B8256051A3EAB7C00613D3C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B8256041A3EAB7C00613D3C /* LaunchScreen.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,30 +56,37 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		350411881A3A6EBC00AF5F8C /* Journey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Journey.swift; sourceTree = "<group>"; };
-		3504118B1A3A6F6A00AF5F8C /* PickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
 		3504118E1A3A716100AF5F8C /* HealthKitHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthKitHandler.swift; sourceTree = "<group>"; };
+		356BD6071A3BD0BC004DE344 /* fs2014-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "fs2014-Bridging-Header.h"; sourceTree = "<group>"; };
+		356BD6081A3BD0BD004DE344 /* ObjectiveCBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectiveCBridge.h; sourceTree = "<group>"; };
+		356BD6091A3BD0BD004DE344 /* DBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBManager.m; sourceTree = "<group>"; };
+		356BD60A1A3BD0BD004DE344 /* DBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBManager.h; sourceTree = "<group>"; };
+		356BD60E1A3BD0E0004DE344 /* JourneyDatabaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JourneyDatabaseManager.swift; sourceTree = "<group>"; };
+		356BD6111A3BD165004DE344 /* Journey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Journey.swift; sourceTree = "<group>"; };
+		356BD6131A3BD180004DE344 /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		356BD6151A3BD191004DE344 /* PickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
+		356BD6171A3BD61F004DE344 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		356BD61A1A3BE46B004DE344 /* journies.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = journies.sqlite; sourceTree = "<group>"; };
+		357956FC1A3D003000E6CD11 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMaps.framework; sourceTree = "<group>"; };
+		357956FE1A3D006B00E6CD11 /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
+		359940751A3DF73B00BF6741 /* StreetViewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreetViewViewController.swift; sourceTree = "<group>"; };
+		359940791A3E1F2D00BF6741 /* History.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
+		3599407F1A3E1F8100BF6741 /* HistoryDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryDetailsViewController.swift; sourceTree = "<group>"; };
+		359940811A3E224900BF6741 /* HistoryCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryCellView.swift; sourceTree = "<group>"; };
+		359940831A3E24F700BF6741 /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		35A4378C1A3A617F006A1511 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		35D0FE5419F6DD260094AE75 /* fs2014.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fs2014.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		35D0FE5419F6DD260094AE75 /* fs2014.temp_caseinsensitive_rename.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fs2014.temp_caseinsensitive_rename.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35D0FE5819F6DD260094AE75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		35D0FE5E19F6DD260094AE75 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		35D0FE6019F6DD260094AE75 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		35D0FE6319F6DD260094AE75 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		35D0FE6919F6DD260094AE75 /* fs2014Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = fs2014Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		35D0FE6919F6DD260094AE75 /* fs2014.temp_caseinsensitive_renameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = fs2014.temp_caseinsensitive_renameTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		35D0FE6E19F6DD260094AE75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		35D0FE6F19F6DD260094AE75 /* fs2014Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fs2014Tests.swift; sourceTree = "<group>"; };
 		35D0FE7919F6DD3D0094AE75 /* fs2014.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = fs2014.entitlements; sourceTree = "<group>"; };
 		35D0FE7A19F6DD3D0094AE75 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		3863EC571A375036009DA393 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
-		3869C3A31A2FD58A004A1661 /* HistoryCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryCellView.swift; sourceTree = "<group>"; };
 		386E163B1A32353B00BCF24A /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		386E163D1A3239AB00BCF24A /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
-		388D6A8B1A16D6340017CC59 /* StreetViewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreetViewViewController.swift; sourceTree = "<group>"; };
-		388D6A8D1A16D6500017CC59 /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
-		38F019231A30D16C0024416C /* HistoryDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryDetailsViewController.swift; sourceTree = "<group>"; };
-		38F138BF1A15A8F5004C128A /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
-		6B29D8E31A2E42790001F343 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMaps.framework; sourceTree = "<group>"; };
-		6B29D8E51A2E42AA0001F343 /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
 		6B29D8E71A2E42D70001F343 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		6B29D8E91A2E42E10001F343 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		6B29D8EB1A2E42EC0001F343 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -88,6 +99,7 @@
 		6B29D8F91A2E43310001F343 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		6B29D8FB1A2E433F0001F343 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		6B29D8FD1A2E434A0001F343 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		6B8256041A3EAB7C00613D3C /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +107,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				356BD6181A3BD61F004DE344 /* libsqlite3.dylib in Frameworks */,
 				386E163E1A3239AB00BCF24A /* AssetsLibrary.framework in Frameworks */,
 				386E163C1A32353B00BCF24A /* Social.framework in Frameworks */,
 				6B29D9011A2E43A30001F343 /* SystemConfiguration.framework in Frameworks */,
@@ -108,9 +121,8 @@
 				6B29D9091A2E43A30001F343 /* CoreText.framework in Frameworks */,
 				6B29D90A1A2E43A30001F343 /* CoreLocation.framework in Frameworks */,
 				6B29D90B1A2E43A30001F343 /* CoreData.framework in Frameworks */,
+				357956FD1A3D003000E6CD11 /* GoogleMaps.framework in Frameworks */,
 				6B29D90C1A2E43A30001F343 /* AVFoundation.framework in Frameworks */,
-				6B29D90D1A2E43A30001F343 /* GoogleMaps.bundle in Frameworks */,
-				6B29D90E1A2E43A30001F343 /* GoogleMaps.framework in Frameworks */,
 				6B29D90F1A2E43A30001F343 /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,8 +150,8 @@
 		35D0FE5519F6DD260094AE75 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				35D0FE5419F6DD260094AE75 /* fs2014.app */,
-				35D0FE6919F6DD260094AE75 /* fs2014Tests.xctest */,
+				35D0FE5419F6DD260094AE75 /* fs2014.temp_caseinsensitive_rename.app */,
+				35D0FE6919F6DD260094AE75 /* fs2014.temp_caseinsensitive_renameTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -147,21 +159,28 @@
 		35D0FE5619F6DD260094AE75 /* fs2014 */ = {
 			isa = PBXGroup;
 			children = (
+				359940831A3E24F700BF6741 /* HistoryViewController.swift */,
+				359940811A3E224900BF6741 /* HistoryCellView.swift */,
+				3599407F1A3E1F8100BF6741 /* HistoryDetailsViewController.swift */,
+				359940791A3E1F2D00BF6741 /* History.swift */,
+				359940751A3DF73B00BF6741 /* StreetViewViewController.swift */,
+				356BD61A1A3BE46B004DE344 /* journies.sqlite */,
+				356BD6151A3BD191004DE344 /* PickerViewController.swift */,
+				356BD6131A3BD180004DE344 /* DashboardViewController.swift */,
+				356BD6111A3BD165004DE344 /* Journey.swift */,
+				356BD60E1A3BD0E0004DE344 /* JourneyDatabaseManager.swift */,
+				356BD6081A3BD0BD004DE344 /* ObjectiveCBridge.h */,
+				356BD6091A3BD0BD004DE344 /* DBManager.m */,
+				356BD60A1A3BD0BD004DE344 /* DBManager.h */,
 				3504118E1A3A716100AF5F8C /* HealthKitHandler.swift */,
-				3504118B1A3A6F6A00AF5F8C /* PickerViewController.swift */,
-				350411881A3A6EBC00AF5F8C /* Journey.swift */,
 				35A4378C1A3A617F006A1511 /* AppDelegate.swift */,
-				38F138BF1A15A8F5004C128A /* DashboardViewController.swift */,
-				388D6A8B1A16D6340017CC59 /* StreetViewViewController.swift */,
-				388D6A8D1A16D6500017CC59 /* HistoryViewController.swift */,
-				3869C3A31A2FD58A004A1661 /* HistoryCellView.swift */,
-				38F019231A30D16C0024416C /* HistoryDetailsViewController.swift */,
 				3863EC571A375036009DA393 /* SettingsTableViewController.swift */,
 				35D0FE5D19F6DD260094AE75 /* Main.storyboard */,
+				6B8256041A3EAB7C00613D3C /* LaunchScreen.xib */,
 				35D0FE7919F6DD3D0094AE75 /* fs2014.entitlements */,
 				35D0FE6019F6DD260094AE75 /* Images.xcassets */,
-				35D0FE6219F6DD260094AE75 /* LaunchScreen.xib */,
 				35D0FE5719F6DD260094AE75 /* Supporting Files */,
+				356BD6071A3BD0BC004DE344 /* fs2014-Bridging-Header.h */,
 			);
 			path = fs2014;
 			sourceTree = "<group>";
@@ -194,6 +213,9 @@
 		6B29D8FF1A2E436D0001F343 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				357956FE1A3D006B00E6CD11 /* GoogleMaps.bundle */,
+				357956FC1A3D003000E6CD11 /* GoogleMaps.framework */,
+				356BD6171A3BD61F004DE344 /* libsqlite3.dylib */,
 				386E163D1A3239AB00BCF24A /* AssetsLibrary.framework */,
 				386E163B1A32353B00BCF24A /* Social.framework */,
 				6B29D8FD1A2E434A0001F343 /* SystemConfiguration.framework */,
@@ -208,8 +230,6 @@
 				6B29D8EB1A2E42EC0001F343 /* CoreLocation.framework */,
 				6B29D8E91A2E42E10001F343 /* CoreData.framework */,
 				6B29D8E71A2E42D70001F343 /* AVFoundation.framework */,
-				6B29D8E51A2E42AA0001F343 /* GoogleMaps.bundle */,
-				6B29D8E31A2E42790001F343 /* GoogleMaps.framework */,
 				35D0FE7A19F6DD3D0094AE75 /* HealthKit.framework */,
 			);
 			name = Frameworks;
@@ -232,7 +252,7 @@
 			);
 			name = fs2014;
 			productName = fs2014;
-			productReference = 35D0FE5419F6DD260094AE75 /* fs2014.app */;
+			productReference = 35D0FE5419F6DD260094AE75 /* fs2014.temp_caseinsensitive_rename.app */;
 			productType = "com.apple.product-type.application";
 		};
 		35D0FE6819F6DD260094AE75 /* fs2014Tests */ = {
@@ -250,7 +270,7 @@
 			);
 			name = fs2014Tests;
 			productName = fs2014Tests;
-			productReference = 35D0FE6919F6DD260094AE75 /* fs2014Tests.xctest */;
+			productReference = 35D0FE6919F6DD260094AE75 /* fs2014.temp_caseinsensitive_renameTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -304,10 +324,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B8256051A3EAB7C00613D3C /* LaunchScreen.xib in Resources */,
 				35D0FE5F19F6DD260094AE75 /* Main.storyboard in Resources */,
-				35D0FE6419F6DD260094AE75 /* LaunchScreen.xib in Resources */,
 				35D0FE6119F6DD260094AE75 /* Images.xcassets in Resources */,
-				6B29D8E61A2E42AA0001F343 /* GoogleMaps.bundle in Resources */,
+				356BD61B1A3BE46B004DE344 /* journies.sqlite in Resources */,
+				357956FF1A3D006B00E6CD11 /* GoogleMaps.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,15 +347,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				3504118D1A3A70D300AF5F8C /* AppDelegate.swift in Sources */,
-				3504118A1A3A6F2800AF5F8C /* Journey.swift in Sources */,
-				3869C3A41A2FD58A004A1661 /* HistoryCellView.swift in Sources */,
-				3504118C1A3A6F6A00AF5F8C /* PickerViewController.swift in Sources */,
-				38F138C01A15A8F5004C128A /* DashboardViewController.swift in Sources */,
-				38F019241A30D16C0024416C /* HistoryDetailsViewController.swift in Sources */,
-				388D6A8C1A16D6340017CC59 /* StreetViewViewController.swift in Sources */,
+				356BD6161A3BD191004DE344 /* PickerViewController.swift in Sources */,
+				356BD60F1A3BD0E0004DE344 /* JourneyDatabaseManager.swift in Sources */,
+				356BD6141A3BD180004DE344 /* DashboardViewController.swift in Sources */,
+				359940841A3E24F700BF6741 /* HistoryViewController.swift in Sources */,
+				3599407C1A3E1F2D00BF6741 /* History.swift in Sources */,
+				359940821A3E224900BF6741 /* HistoryCellView.swift in Sources */,
+				356BD60C1A3BD0BD004DE344 /* DBManager.m in Sources */,
 				3504118F1A3A716100AF5F8C /* HealthKitHandler.swift in Sources */,
+				359940801A3E1F8100BF6741 /* HistoryDetailsViewController.swift in Sources */,
+				356BD6121A3BD165004DE344 /* Journey.swift in Sources */,
 				3863EC581A375036009DA393 /* SettingsTableViewController.swift in Sources */,
-				388D6A8E1A16D6500017CC59 /* HistoryViewController.swift in Sources */,
+				359940761A3DF73B00BF6741 /* StreetViewViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,14 +387,6 @@
 				35D0FE5E19F6DD260094AE75 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		35D0FE6219F6DD260094AE75 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				35D0FE6319F6DD260094AE75 /* Base */,
-			);
-			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -413,6 +429,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -448,6 +465,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -457,6 +475,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = fs2014/fs2014.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -466,8 +485,11 @@
 				);
 				INFOPLIST_FILE = fs2014/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
+				PRODUCT_NAME = fs2014.temp_caseinsensitive_rename;
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/pmca89/Desktop/FINAL JOURNEY - PAT COPY 12:15/fs2014/ObjectiveCBridge.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -475,6 +497,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = fs2014/fs2014.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -484,8 +507,10 @@
 				);
 				INFOPLIST_FILE = fs2014/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
+				PRODUCT_NAME = fs2014.temp_caseinsensitive_rename;
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/pmca89/Desktop/FINAL JOURNEY - PAT COPY 12:15/fs2014/ObjectiveCBridge.h";
 			};
 			name = Release;
 		};
@@ -503,8 +528,8 @@
 				);
 				INFOPLIST_FILE = fs2014Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/fs2014.app/fs2014";
+				PRODUCT_NAME = fs2014.temp_caseinsensitive_renameTests;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/fs2014.temp_caseinsensitive_rename.app/fs2014.temp_caseinsensitive_rename";
 			};
 			name = Debug;
 		};
@@ -518,8 +543,8 @@
 				);
 				INFOPLIST_FILE = fs2014Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/fs2014.app/fs2014";
+				PRODUCT_NAME = fs2014.temp_caseinsensitive_renameTests;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/fs2014.temp_caseinsensitive_rename.app/fs2014.temp_caseinsensitive_rename";
 			};
 			name = Release;
 		};

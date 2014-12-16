@@ -12,25 +12,27 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    var healthStore:HealthKitHandler = HealthKitHandler()
-    
+    let googleMapsApiKey:String = "AIzaSyBVYTkLUwqaFZEzddZ70ufbhwDlNiWGCzA"
+    var userJourney: Journey?
+
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
+        GMSServices.provideAPIKey(googleMapsApiKey)
+        userJourney = Journey().load()
         //************* Notifications and background Fetch setup ****************
-    
+        
         //enable local notifications
         let settings = UIUserNotificationSettings(forTypes: UIUserNotificationType.Alert, categories: nil)
         UIApplication.sharedApplication().registerUserNotificationSettings(settings)
         //set minimum background fetch interval to minimal value
         application.setMinimumBackgroundFetchInterval(UIApplicationBackgroundFetchIntervalMinimum)
         //setup healthstore
-        healthStore = HealthKitHandler()
-        healthStore.setupHealthStoreIfPossible()
         
         //************ Check if Journey is selected ************//
-        if let userData = NSUserDefaults.standardUserDefaults().objectForKey("data") as? NSData {
+        if(userJourney != nil){
             return true
-        }else{
+        }
+        else{
             self.window = UIWindow(frame:UIScreen.mainScreen().bounds)
             var storyboard = UIStoryboard(name: "Main", bundle: nil)
             var initialViewController = storyboard.instantiateViewControllerWithIdentifier("pickerView") as UIViewController
@@ -39,12 +41,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             var defaults:NSUserDefaults = NSUserDefaults.standardUserDefaults()
             
             defaults.setObject(false, forKey: "weeklyNotifications")
-            defaults.setObject("Miles", forKey: "units")
+            defaults.setObject("Imperial", forKey: "units")
             defaults.setObject(true, forKey: "landmarkNotifications")
             
             defaults.synchronize()
         }
-        
         return true
     }
     
@@ -56,28 +57,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationDidEnterBackground(application: UIApplication) {
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
-        self.healthStore.timeOfAppTermination = NSDate()
-        
+        userJourney?.save()
     }
 
     func applicationWillEnterForeground(application: UIApplication) {
         // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+         userJourney!.healthKit!.retrieveStepData()
     }
 
     func applicationDidBecomeActive(application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+
+
+       
     }
+    
 
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+        userJourney!.save()
     }
     
    func application(application: UIApplication, performFetchWithCompletionHandler completionHandler: (UIBackgroundFetchResult) -> Void) {
-        println("performing background fetch")
-        completionHandler(UIBackgroundFetchResult.NewData)
-        self.healthStore.backgroundFetch(self.healthStore.timeOfAppTermination!)
-        println("end of background fetch")
-    
+        userJourney!.healthKit!.backgroundFetch{
+            self.userJourney!.checkForNotificationsWithoutNSNotification()
+            self.userJourney!.save()
+            completionHandler(UIBackgroundFetchResult.NewData)
+        }
     }
     
     

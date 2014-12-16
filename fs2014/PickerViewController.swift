@@ -9,14 +9,37 @@
 import UIKit
 
 class PickerViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
-
+    
     @IBOutlet weak var journeyPicker: UIPickerView!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var journeyStamps: UIImageView!
-    var journies:[(route:String, image:String)] = [("Route 66 - 2,451 miles", "route66-stamp.pdf"), ("California - 556 miles", "california-stamp.pdf"), ("Grand Canyon - 277 miles", "grandcanyon-stamp.pdf"), ("Road to Hana - 64 miles", "roadtohana-stamp.pdf"), ("Las Vegas Strip - 6 miles", "lasvegas-stamp.pdf")]
     
-    // On button press, switches to dashboardViewController 
+    var journeyDatabase: JourneyDatabase = JourneyDatabase()
+    var journies:[(route:String,(steps: Int, miles: Int))]?
+    var journiesImages:[(route:String, image:String)]?
+    var userJourney: Journey?
+    
+    let appDelegate = (UIApplication.sharedApplication().delegate! as AppDelegate)
+    // On button press, switches to dashboardViewController
     @IBAction func toDashboardView(sender: AnyObject) {
+        //Get name of Journey
+        var name = journies![journeyPicker.selectedRowInComponent(0)].route
+        //Get Journey Steps
+        var steps = journies![journeyPicker.selectedRowInComponent(0)].1.steps
+        //Get Journey Miles
+        var miles = journies![journeyPicker.selectedRowInComponent(0)].1.miles
+        
+        //Create instance object of Journey
+        if(userJourney == nil){
+            userJourney = Journey(name: name, distanceInSteps: steps, distanceInMiles: miles)
+            userJourney!.save()
+            appDelegate.userJourney = userJourney
+        }else{
+              userJourney!.updateJourney(name, distanceInSteps: steps, distanceInMiles: miles)
+              userJourney!.save()
+        }
+        
+        
         let vc = DashboardViewController(nibName: "DashboardViewController", bundle: nil)
         navigationController?.pushViewController(vc, animated: true)
     }
@@ -25,26 +48,33 @@ class PickerViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     @IBAction func sortJourneys(sender:UISegmentedControl) {
         
         switch sender.selectedSegmentIndex{
-            case 0:
-                journies = [("Route 66 - 2,451 miles", "route66-stamp.pdf"), ("California - 556 miles", "california-stamp.pdf"), ("Grand Canyon - 277 miles", "grandcanyon-stamp.pdf"), ("Road to Hana - 64 miles", "roadtohana-stamp.pdf"), ("Las Vegas Strip - 6 miles", "lasvegas-stamp.pdf")]
-            case 1:
-                journies = [("Las Vegas Strip - 6 miles", "lasvegas-stamp.pdf"), ("Road to Hana - 64 miles", "roadtohana-stamp.pdf"), ("Grand Canyon - 277 miles", "grandcanyon-stamp.pdf"), ("California - 556 miles", "california-stamp.pdf"), ("Route 66 - 2,451 miles", "route66-stamp.pdf")]
-            default:
-                break;
+        case 0:
+            journies = journeyDatabase.journiesDistances
+            journiesImages = journeyDatabase.journiesImages
+        case 1:
+            journies = journeyDatabase.journiesDistancesReverse
+            journiesImages = journeyDatabase.journiesImagesReverse
+        default:
+            break;
             
         }
-
+        
         self.journeyPicker.reloadAllComponents()
-        journeyStamps.image = UIImage(named: journies[journeyPicker.selectedRowInComponent(0)].image)
+        journeyStamps.image = UIImage(named:journiesImages![journeyPicker.selectedRowInComponent(0)].image)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         // Do any additional setup after loading the view.
+        journies = journeyDatabase.journiesDistances
+        journiesImages = journeyDatabase.journiesImages
+        
+        //check if userJourney exists
+        userJourney = (UIApplication.sharedApplication().delegate! as AppDelegate).userJourney
+        
         journeyPicker.delegate = self
         journeyPicker.dataSource = self
-        journeyStamps.image = UIImage(named: journies[journeyPicker.selectedRowInComponent(0)].image)
+        journeyStamps.image = UIImage(named: journiesImages![journeyPicker.selectedRowInComponent(0)].image)
     }
     
     override func didReceiveMemoryWarning() {
@@ -55,30 +85,36 @@ class PickerViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
         return 1
     }
-
+    
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-
-        return journies.count
+        
+        return journies!.count
     }
     
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
-
-        return journies[row].route
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String
+    {
+        
+        var pickerText = journies![row].route + " - "
+        var distance = Float(journies![row].1.miles)
+        var math = distance * 1.6
+        var distanceKilo:Int = Int(math)
+        //CHECK FOR KILOMETER
+        if(NSUserDefaults.standardUserDefaults().objectForKey("units") as? String == "Imperial"){
+            pickerText += NSString(format: "%.01d",journies![row].1.miles)
+            pickerText += " Miles"
+        }
+        else{
+            pickerText += NSString(format: "%.01d", distanceKilo)
+            pickerText += " KM"
+        }
+        return pickerText
     }
     
     func pickerView(pickerView: UIPickerView, didSelectRow row:Int, inComponent component: Int)
     {
-        journeyStamps.image = UIImage(named:journies[pickerView.selectedRowInComponent(0)].image)
+        journeyStamps.image = UIImage(named:journiesImages![pickerView.selectedRowInComponent(0)].image)
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
+    
 }

@@ -8,20 +8,34 @@
 
 import UIKit
 
+
 class HistoryViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
-    
+
     private let reuseIdentifier = "journeyStamp"
     
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var historyCell: UICollectionViewCell!
     
     var stamps:[String] = []
-
+    var postcards:[String] = []
+    var error: NSError?
+    var hist:[History]? = []
+    var nextScreenRow:Int = 0
+    var unar: [History]?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        var stamps = ["california-stamp.pdf"]
+        var documentDirectories: NSArray = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)
+        var documentDirectory:String = documentDirectories.objectAtIndex(0) as String
+        var path:String = documentDirectory.stringByAppendingPathComponent("history.archive")
+        
+        unar = NSKeyedUnarchiver.unarchiveObjectWithFile(path) as? [History]
+        if(unar != nil){
+             self.hist! = unar!
+        }
+       
     }
 
     override func didReceiveMemoryWarning() {
@@ -36,21 +50,30 @@ class HistoryViewController: UIViewController, UICollectionViewDelegate, UIColle
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        //return stamps.count
-        
-        return 1
+        return hist!.count
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        
+        var stamps:[String] = []
         var cell = collectionView.dequeueReusableCellWithReuseIdentifier("journeyStamp", forIndexPath: indexPath) as HistoryCellView
-        cell.stamp.image = UIImage(named: "california-stamp.pdf")
-        
+        if(hist != nil){
+        for h in hist! {
+            stamps.append(h.stamp)
+            postcards.append(h.postcard)
+        }
+      
+        cell.stamp.image = UIImage(named: stamps[indexPath.row])
+        }
         return cell
     }
     
-    func collectionView(collectionView: UICollectionView, didDeselectItemAtIndexPath indexPath: NSIndexPath) {
-        
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        if segue.identifier == "toDetails" {
+            let cell = sender as UICollectionViewCell
+            let indexPath = collectionView.indexPathForCell(cell)
+            let vc = segue.destinationViewController as HistoryDetailsViewController
+            vc.postcard = postcards[indexPath!.item]
+        }
     }
     
     /*
